@@ -1,0 +1,49 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0b1726;
+
+  color: #4e96a6;
+}
+
+.ibm-plex sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  font-size: 2.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav__logo {
+  position: absolute;
+  left: 10%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 5rem;
+  margin: 3% 8% 0 0;
+}
+
+.main__content {
+  font-size: 4rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.apresentation__text {
+  margin: 12rem 0 0 8rem;
+}
+
+.apresentation__image img {
+  padding: 10rem 10rem 0 0;
+}
