@@ -18,3 +18,28 @@ a {
   gap: 3rem;
   margin: 3% 8% 0 0;
 }
+
+.nav__itens a {
+  position: relative;
+  padding: 0 10px;
+}
+
+.nav__itens a:after {
+  content: "";
+  position: absolute;
+  background-color: #96d2d9;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.nav__itens a:hover {
+  transition: 0.5s;
+  color: #96d2d9;
+}
+
+.nav__itens a:hover:after {
+  width: 100%;
+}

@@ -1,0 +1,10 @@
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project__card {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}

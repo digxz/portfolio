@@ -14,6 +14,11 @@
 body {
   height: 100vh;
   background: linear-gradient(61deg, #0b1726, #101c2e 50%);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  letter-spacing: 0.5px;
+}
+
+.titles {
+  font-size: 4rem;
+  text-align: center;
 }
