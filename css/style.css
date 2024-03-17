@@ -35,15 +35,31 @@ a {
 }
 
 .main__content {
-  font-size: 4rem;
+  font-size: 3rem;
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
 .apresentation__text {
-  margin: 12rem 0 0 8rem;
+  margin: 14rem 0 0 8rem;
 }
 
 .apresentation__image img {
-  padding: 10rem 10rem 0 0;
+  width: 20rem;
+  margin: 6rem 12rem 0 0;
+
+  border-radius: 50%;
+  border: 4px solid #4e96a6;
+
+  animation: float 2s ease infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
