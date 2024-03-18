@@ -1,0 +1,20 @@
+.skills {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skills__cards {
+  display: flex;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 15%;
+  background-color: #114559;
+  border: solid 3px #4e96a6;
+
+  color: #4e96a6;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.5s;
+}
