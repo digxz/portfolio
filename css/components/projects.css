@@ -4,7 +4,22 @@
 }
 
 .project__card {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
+  display: flex;
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 15%;
+  background-color: #114559;
+  border: solid 3px #4e96a6;
+
+  color: #4e96a6;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.5s;
+}
+
+.project__card:hover {
+  width: 20rem;
+  height: 20rem;
 }
