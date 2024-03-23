@@ -16,7 +16,7 @@ a {
   display: flex;
   justify-content: right;
   gap: 3rem;
-  margin: 3% 8% 0 0;
+  margin: 5rem 8% 0 0;
 }
 
 .nav__itens a {
