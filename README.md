@@ -4,6 +4,8 @@
 
 <h4 align="center"><a href="https://digxz.github.io/portfolio/">Clique para visitar o projeto</a></h4>
 
+---
+
 ## 📚 Seções
 
 O projeto é composto por cinco seções:
