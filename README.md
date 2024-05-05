@@ -1,6 +1,6 @@
 ## 📚 Seções
 
-O site é composto por cinco seções:
+O projeto é composto por cinco seções:
 
 - **Home:** Home do Portfolio;
 - **Projects:** Seção que apresenta os projetos;
