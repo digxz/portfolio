@@ -1,6 +1,8 @@
 .skills {
   display: flex;
   justify-content: space-evenly;
+
+  padding-bottom: 10rem;
 }
 
 .skills__cards {
