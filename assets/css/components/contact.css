@@ -1,0 +1,12 @@
+.form {
+  display: flexbox;
+}
+
+#nome__contact {
+  margin: auto;
+  font-size: 3rem;
+}
+
+#nome__caixa {
+  font-size: 1.5rem;
+}
