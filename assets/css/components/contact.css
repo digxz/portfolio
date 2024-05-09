@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30rem 0;
+  margin: 26rem 0;
 }
 
 .form {
@@ -31,7 +31,7 @@
 }
 
 form label {
-  font-size: 4rem;
+  font-size: 2rem;
   margin-bottom: 0.3rem;
 }
 
@@ -41,34 +41,32 @@ form input {
   margin-bottom: 0.6rem;
   font-size: 0.9rem;
   transition: all 0.5s;
-}
+  color: #111111;
+  border-radius: 1rem;
 
-form input:focus {
-  border: 1px solid;
-  border-radius: 0.6rem;
+  cursor: url("/assets/images/cursor/textcursor.svg"), auto;
 }
 
 form textarea {
   padding: 0.9rem;
   outline: none;
   font-size: 1rem;
-  transition: all 0.5s;
-}
+  color: #111111;
+  border-radius: 1rem;
 
-form textarea:focus {
-  border: 1px solid;
-  border-radius: 0.3rem;
+  cursor: url("/assets/images/cursor/textcursor.svg"), auto;
 }
 
 form button {
   margin: 1.5rem 0 5rem;
   padding: 0.9rem;
-  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   border: 1px solid;
   color: #b798ff;
   transition: all 1s;
+
+  cursor: url("/assets/images/cursor/handpointing.svg"), auto;
 }
 
 form button:hover {
