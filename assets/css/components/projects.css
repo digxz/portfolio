@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: center;
 
+  cursor: url("/assets/images/cursor/handpointing.svg"), auto;
   transition: 0.5s;
 }
 
