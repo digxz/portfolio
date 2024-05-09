@@ -9,8 +9,10 @@ revelar.reveal(".titles", {
 });
 
 var typed = new Typed("#type_effect", {
-  strings: ["Programmer", "Student", "Tester"],
+  strings: ["Programmer", "Student"],
+  startDelay: 750,
   typeSpeed: 150,
   backSpeed: 150,
-  looped: true,
+  loop: true,
+  loopCount: Infinity,
 });
