@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: #986dff;
   cursor: url("/assets/images/cursor/default.png"), auto;
+  -webkit-cursor: url("/assets/images/cursor/default.png"), auto;
 }
 
 .ibm-plex sans-regular {
@@ -22,6 +23,7 @@ body {
 
 a {
   cursor: url("/assets/images/cursor/handpointing.png"), auto;
+  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), auto;
 }
 
 .titles {

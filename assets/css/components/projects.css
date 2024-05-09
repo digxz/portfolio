@@ -21,6 +21,7 @@
   justify-content: center;
 
   cursor: url("/assets/images/cursor/handpointing.png"), auto;
+  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), auto;
   transition: 0.5s;
 }
 
