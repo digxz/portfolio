@@ -11,9 +11,9 @@
 O projeto é composto por cinco seções:
 
 - **Home:** Home do Portfolio;
+- **About Me:** Apresenta informações sobre mim;
 - **Projects:** Seção que apresenta os projetos;
 - **Skills:** Apresenta as habilidades e tecnologias que domino;
-- **About Me:** Apresenta informações sobre mim;
 - **Contact:** Informações de contato;
 
 ---
