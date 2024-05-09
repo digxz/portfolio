@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #986dff;
-  cursor: url("/assets/images/cursor/default.svg"), auto;
+  cursor: url("/assets/images/cursor/default.png"), auto;
 }
 
 .ibm-plex sans-regular {
@@ -21,7 +21,7 @@ body {
 }
 
 a {
-  cursor: url("/assets/images/cursor/handpointing.svg"), auto;
+  cursor: url("/assets/images/cursor/handpointing.png"), auto;
 }
 
 .titles {

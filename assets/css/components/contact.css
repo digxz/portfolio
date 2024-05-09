@@ -44,7 +44,7 @@ form input {
   color: #111111;
   border-radius: 1rem;
 
-  cursor: url("/assets/images/cursor/textcursor.svg"), auto;
+  cursor: url("/assets/images/cursor/textcursor.png"), auto;
 }
 
 form textarea {
@@ -54,7 +54,7 @@ form textarea {
   color: #111111;
   border-radius: 1rem;
 
-  cursor: url("/assets/images/cursor/textcursor.svg"), auto;
+  cursor: url("/assets/images/cursor/textcursor.png"), auto;
 }
 
 form button {
@@ -66,7 +66,7 @@ form button {
   color: #b798ff;
   transition: all 1s;
 
-  cursor: url("/assets/images/cursor/handpointing.svg"), auto;
+  cursor: url("/assets/images/cursor/handpointing.png"), auto;
 }
 
 form button:hover {
