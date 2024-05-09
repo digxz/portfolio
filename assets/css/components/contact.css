@@ -1,3 +1,7 @@
+#contact__title {
+  padding: 2rem 0 0 0;
+}
+
 .contact {
   display: flex;
   align-items: center;

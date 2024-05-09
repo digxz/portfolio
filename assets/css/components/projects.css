@@ -1,3 +1,7 @@
+#projects__title {
+  padding: 5rem 0 0 0;
+}
+
 .projects {
   display: flex;
   justify-content: space-evenly;
