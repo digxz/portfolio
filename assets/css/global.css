@@ -28,3 +28,12 @@ body {
 .scroll {
   visibility: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #986dff;
+  border-radius: 1rem;
+}
