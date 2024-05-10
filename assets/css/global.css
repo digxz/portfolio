@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   color: #986dff;
-  cursor: url("/assets/images/cursor/default.png"), auto;
-  -webkit-cursor: url("/assets/images/cursor/default.png"), auto;
+  cursor: url("/assets/images/cursor/default.png"), default;
+  -webkit-cursor: url("/assets/images/cursor/default.png"), default;
 }
 
 .ibm-plex sans-regular {
@@ -22,8 +22,8 @@ body {
 }
 
 a {
-  cursor: url("/assets/images/cursor/handpointing.png"), auto;
-  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), auto;
+  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
 }
 
 .titles {

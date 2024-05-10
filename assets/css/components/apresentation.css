@@ -11,23 +11,3 @@
 .apresentation__emphasis {
   color: #b798ff;
 }
-
-/* .apresentation__image img {
-  width: 25rem;
-  margin: 9rem 18rem 15rem 0;
-
-  border-radius: 50%;
-  border: 4px solid #986dff;
-
-  animation: float 2s ease infinite;
-} */
-
-/* @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-} */
