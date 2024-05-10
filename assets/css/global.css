@@ -6,6 +6,8 @@
 
   cursor: url("/assets/images/cursor/default.png"), default;
   -webkit-cursor: url("/assets/images/cursor/default.png"), default;
+
+  scroll-behavior: smooth;
 }
 
 .archivo-font {
