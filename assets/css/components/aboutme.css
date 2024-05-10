@@ -5,9 +5,32 @@
 .about {
   font-size: 2rem;
   line-height: 3.9rem;
-  margin: 0 10rem 0 10rem;
+  margin: 0 23rem 0;
 }
 
 .emphasis {
   color: #b798ff;
+}
+
+#connect {
+  padding: 1.8rem 0 0;
+  color: #797e87;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.connect__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 4rem;
+
+  margin: 1rem 0 10rem;
+}
+.connect__icons a img {
+  height: 5rem;
+
+  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
 }
