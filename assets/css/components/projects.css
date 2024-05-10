@@ -3,29 +3,26 @@
 }
 
 .projects {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  gap: 1rem;
 }
 
 .project__card {
   display: flex;
-  width: 18.75rem;
-  height: 18.75rem;
-  border-radius: 15%;
-  background-color: #986dff;
-  border: solid 3px #b798ff;
 
   color: #b798ff;
   font-size: 2rem;
-  align-items: center;
-  justify-content: center;
 
-  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
-  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
-  transition: 0.5s;
+  width: 18rem;
+  height: 12rem;
+  background-color: #151515;
+  border: solid 1px #b798ff;
 }
 
-.project__card:hover {
-  width: 20rem;
-  height: 20rem;
+.card__title {
+  font-size: 1.3rem;
+  padding: 0.5rem 0 0 1rem;
+}
+
+.card__description {
 }
