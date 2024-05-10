@@ -1,28 +1,40 @@
 #projects__title {
-  padding: 5rem 0 0 0;
+  padding: 5rem 0 2rem 0;
 }
 
 .projects {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 22rem 22rem 22rem;
+  gap: 0.8rem;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .project__card {
   display: flex;
+  flex-direction: column;
 
   color: #b798ff;
   font-size: 2rem;
 
-  width: 18rem;
-  height: 12rem;
+  width: 22rem;
+  height: 15rem;
   background-color: #151515;
   border: solid 1px #b798ff;
 }
 
 .card__title {
-  font-size: 1.3rem;
-  padding: 0.5rem 0 0 1rem;
+  font-size: 1.4rem;
+  margin: 1.6rem 0 0 2rem;
 }
 
 .card__description {
+  color: #9ea3af;
+  font-size: 1.2rem;
+
+  margin: 1rem 1rem 0 2rem;
+}
+
+.card__links {
 }
