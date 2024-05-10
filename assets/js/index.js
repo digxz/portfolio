@@ -10,8 +10,8 @@ revelar.reveal(".titles", {
 
 var typed = new Typed("#type_effect", {
   strings: ["Web Developer", "Programmer", "Student"],
-  startDelay: 750,
-  backDelay: 1000,
+  startDelay: 1000,
+  backDelay: 1500,
   typeSpeed: 150,
   backSpeed: 150,
   loop: true,
