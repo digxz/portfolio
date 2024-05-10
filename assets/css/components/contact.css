@@ -31,9 +31,11 @@
 }
 
 form label {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.3rem;
   color: #986dff;
+
+  font-family: "Archivo", sans-serif;
 }
 
 form input {

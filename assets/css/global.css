@@ -52,3 +52,38 @@ a {
   background-color: #986dff;
   border-radius: 10rem;
 }
+
+.scroll__top {
+  outline: none;
+  border: 0;
+  background-color: #111111;
+  padding: 0.5rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+
+  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+
+  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+}
+
+.scroll__top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll__top img {
+  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+}

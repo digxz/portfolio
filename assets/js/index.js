@@ -17,3 +17,15 @@ var typed = new Typed("#type_effect", {
   loop: true,
   loopCount: Infinity,
 });
+
+window.addEventListener("scroll", function () {
+  let scroll = document.querySelector(".scroll__top");
+  scroll.classList.toggle("active", window.scrollY > 450);
+});
+
+function backToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
