@@ -23,4 +23,5 @@ O projeto é composto por cinco seções:
 Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 
 - HTML;
-- CSS.
+- CSS;
+- Javascript.
