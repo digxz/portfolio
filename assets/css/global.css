@@ -2,7 +2,7 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #986dff;
+  color: #f1f1f1;
   cursor: url("/assets/images/cursor/default.png"), default;
   -webkit-cursor: url("/assets/images/cursor/default.png"), default;
 }
@@ -30,6 +30,7 @@ a {
   font-size: 4rem;
   text-align: center;
   visibility: hidden;
+  color: #986dff;
 }
 
 .scroll {
@@ -37,10 +38,10 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #986dff;
-  border-radius: 1rem;
+  border-radius: 10rem;
 }
