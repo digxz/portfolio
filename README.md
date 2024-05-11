@@ -6,7 +6,7 @@
 
 
 
-## 📚 Seções
+<h2 align="center"> 📚 Seções</h2>
 
 O projeto é composto por cinco seções:
 
@@ -18,7 +18,7 @@ O projeto é composto por cinco seções:
 
 ---
 
-## 💼 Tecnologias utilizadas
+<h2 align="center">💼 Tecnologias utilizadas</h2>
 
 Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 
@@ -28,13 +28,13 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
   
 ---
 
-## 📖 Finalidade do Projeto
+<h2 align="center">📖 Finalidade do Projeto</h2>
 
 - O projeto foi desenvolvido pensando na apresentação pessoal.
 - Ele mostra meus principais principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
     
 ---
 
-## ❗ AVISOS ❗ 
+<h2 align="center">❗ AVISOS ❗</h2>
 
 - O projeto ainda **não** conta com responsividade.
