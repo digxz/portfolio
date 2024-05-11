@@ -28,8 +28,10 @@
 
   margin: 1rem 0 10rem;
 }
+
 .connect__icons a img {
   height: 5rem;
+  transition: 0.5s ease;
 
   cursor: url("/assets/images/cursor/handpointing.png"), pointer;
   -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
