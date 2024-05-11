@@ -4,7 +4,7 @@
 
 <h4 align="center"><a href="https://digxz.vercel.app/">Clique para visitar o projeto</a></h4>
 
----
+<br><br>
 
 <h2 align="center"> 📚 Seções</h2>
 
