@@ -4,7 +4,7 @@
 
 <h4 align="center"><a href="https://digxz.vercel.app/">Clique para visitar o projeto</a></h4>
 
-
+---
 
 <h2 align="center"> 📚 Seções</h2>
 
@@ -14,7 +14,7 @@ O projeto é composto por cinco seções:
 - **About Me:** Apresenta informações sobre mim;
 - **Projects:** Seção que apresenta os projetos;
 - **Skills:** Apresenta as habilidades e tecnologias que domino;
-- **Contact:** Informações de contato;
+- **Contact:** Formulário para entrar em contato!
 
 ---
 
