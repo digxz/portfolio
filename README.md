@@ -17,6 +17,7 @@ O projeto é composto por cinco seções:
 - **Contact:** Formulário para entrar em contato!
 
 ---
+<br>
 
 <h2 align="center">💼 Tecnologias utilizadas</h2>
 
@@ -27,6 +28,7 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 - Javascript.
   
 ---
+<br>
 
 <h2 align="center">📖 Finalidade do Projeto</h2>
 
@@ -34,6 +36,7 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 - Ele mostra meus principais principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
     
 ---
+<br>
 
 <h2 align="center">❗ AVISOS ❗</h2>
 
