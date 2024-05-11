@@ -30,6 +30,6 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 
 ## 📖 Finalidade do Projeto
 
-O projeto foi desenvolvido pensando na apresentação pessoal.
-Ele mostra meus principais principais projetos e habilidades, e também permite que o usuário entre em contato comigo. 
+- O projeto foi desenvolvido pensando na apresentação pessoal.
+- Ele mostra meus principais principais projetos e habilidades, e também permite que o usuário entre em contato comigo. 
 
