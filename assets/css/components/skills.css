@@ -4,23 +4,23 @@
 
 .skills {
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: center;
+  gap: 1rem;
   padding-bottom: 10rem;
 }
 
 .skills__cards {
   display: flex;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 15%;
-  background-color: #986dff;
-  border: solid 3px #b798ff;
-
-  color: #4e96a6;
-  font-size: 2rem;
   align-items: center;
   justify-content: center;
 
-  transition: 0.5s;
+  width: 13rem;
+  height: 13rem;
+  background-color: #151515;
+  border: solid 1px #b798ff;
+}
+
+.skills__cards img {
+  width: 10rem;
+  height: 10rem;
 }
