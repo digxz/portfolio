@@ -2,7 +2,7 @@
   💻<br>Portfólio - Diego Ramirez
 </h1>
 
-<h4 align="center"><a href="https://digxz.vercel.app/">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://digxz.vercel.app/">Clique para visitar o projeto!</a></h4>
 
 <br><br>
 
@@ -19,7 +19,7 @@ O projeto é composto por cinco seções:
 ---
 <br>
 
-<h2 align="center">💼 Tecnologias utilizadas</h2>
+<h2 align="center">💼 Tecnologias Utilizadas</h2>
 
 Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 
@@ -33,7 +33,7 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 <h2 align="center">📖 Finalidade do Projeto</h2>
 
 - O projeto foi desenvolvido pensando na apresentação pessoal.
-- Ele mostra meus principais principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
+- Ele mostra meus principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
     
 ---
 <br>
