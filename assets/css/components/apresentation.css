@@ -1,11 +1,16 @@
 .main__content {
   font-size: 4rem;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .apresentation__text {
-  margin: 23rem 0 23rem 10rem;
+  border: 2px solid red;
+  padding: 0rem 12rem 0rem 12rem;
+  text-align: left;
+  margin-top: 10%;
+  /* justify-content: left; */
 }
 
 .apresentation__emphasis {

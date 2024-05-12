@@ -16,12 +16,16 @@
   font-variation-settings: "width" 100;
 }
 
+html {
+  width: 100% !important;
+}
+
 body {
   font-family: "Archivo", sans-serif;
   background-color: #111111;
   background-repeat: repeat;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
   letter-spacing: 0.5px;
 }
 
