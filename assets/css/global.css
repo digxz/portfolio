@@ -52,6 +52,11 @@ a {
   border-radius: 10rem;
 }
 
+::selection {
+  background-color: #b798ff;
+  color: #f1f1f1;
+}
+
 .scroll__top {
   outline: none;
   border: 0;
