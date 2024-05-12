@@ -83,3 +83,9 @@ form button:hover {
   transition: 0.8s;
   transform: scale(1.05);
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .form {
+    visibility: hidden;
+  }
+}

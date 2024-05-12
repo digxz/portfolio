@@ -36,3 +36,11 @@
   cursor: url("/assets/images/cursor/handpointing.png"), pointer;
   -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .about {
+    font-size: 2rem;
+    line-height: 3.9rem;
+    margin: 0 0;
+  }
+}

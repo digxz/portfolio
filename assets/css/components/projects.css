@@ -38,3 +38,22 @@
 
 .card__links {
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .projects {
+    display: block;
+  }
+
+  .project__card {
+    display: flex;
+    flex-direction: column;
+
+    color: #b798ff;
+    font-size: 2rem;
+
+    width: 90vw;
+    height: 15rem;
+    background-color: #151515;
+    border: solid 1px #b798ff;
+  }
+}
