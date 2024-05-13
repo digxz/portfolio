@@ -144,6 +144,9 @@ a {
 
 /* desktops */
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .titles {
+    font-size: 2.8rem;
+  }
 }
 
 /* bigger displays */

@@ -79,7 +79,7 @@ a {
     z-index: 1;
     top: 0;
     left: 0;
-    height: 15%;
+    height: 6.4rem;
 
     background-color: #111;
   }
@@ -126,8 +126,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-
-    background-color: #111;
   }
 
   .navbar ul {
@@ -145,6 +143,23 @@ a {
 
 /* desktops */
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar ul {
+    font-size: 2rem;
+    gap: 1.6rem;
+    margin: 6rem 3rem;
+    padding: 0;
+  }
+
+  #nav__logo img {
+    margin: 2.5rem 7rem 0;
+    width: 6rem;
+  }
 }
 
 /* bigger displays */
