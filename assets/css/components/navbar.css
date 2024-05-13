@@ -108,14 +108,14 @@ a {
   }
 
   .navbar ul {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     gap: 1.6rem;
     margin: 3rem 3rem;
     padding: 0;
   }
 
   #nav__logo img {
-    margin: 1.8rem 1.8rem 0;
+    margin: 1.8rem 3rem 0;
     width: 4rem;
   }
 }
@@ -129,14 +129,14 @@ a {
   }
 
   .navbar ul {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     gap: 1.6rem;
     margin: 3rem 3rem;
     padding: 0;
   }
 
   #nav__logo img {
-    margin: 1.8rem 1.8rem 0;
+    margin: 1.8rem 4rem;
     width: 4rem;
   }
 }
@@ -150,15 +150,14 @@ a {
   }
 
   .navbar ul {
-    font-size: 2rem;
+    font-size: 1.7rem;
     gap: 1.6rem;
-    margin: 6rem 3rem;
+    margin: 3rem 3rem;
     padding: 0;
   }
 
   #nav__logo img {
-    margin: 2.5rem 7rem 0;
-    width: 6rem;
+    margin: 1.5rem 6rem;
   }
 }
 

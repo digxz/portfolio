@@ -44,12 +44,16 @@
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .apresentation__text {
     font-size: 3.3rem;
-    margin: 15rem 3rem 0;
+    margin: 15rem 4rem 0;
   }
 }
 
 /* desktops */
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .apresentation__text {
+    font-size: 3.5rem;
+    margin: 20rem 7rem 13rem;
+  }
 }
 
 /* bigger displays */
