@@ -64,6 +64,20 @@
   }
 
   .project__card {
-    height: 15rem;
+    height: 13rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+
+    margin: auto;
+  }
+
+  .project__card {
+    height: 13rem;
   }
 }

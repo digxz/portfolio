@@ -96,10 +96,12 @@ a {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* .navbar {
-    position: fixed;
+  .navbar {
+    position: absolute  ;
+    top: 0;
+    left: 0;
     background-color: red;
-  } */
+  }
 
   .navbar ul {
     font-size: 1.5rem;
