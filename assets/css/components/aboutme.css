@@ -65,9 +65,25 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .about {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 2rem;
-    margin: 0 rem;
+    margin: 0 6rem;
+  }
+
+  #connect {
+    font-size: 1.7rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin: 0 8rem;
   }
 
   #connect {
