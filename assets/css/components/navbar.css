@@ -71,6 +71,7 @@ a {
   }
 }
 
+/* small displays */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .navbar {
     position: fixed;
@@ -96,6 +97,7 @@ a {
   }
 }
 
+/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .navbar {
     position: absolute;
@@ -116,4 +118,35 @@ a {
     margin: 1.8rem 1.8rem 0;
     width: 4rem;
   }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #111;
+  }
+
+  .navbar ul {
+    font-size: 1.7rem;
+    gap: 1.6rem;
+    margin: 3rem 3rem;
+    padding: 0;
+  }
+
+  #nav__logo img {
+    margin: 1.8rem 1.8rem 0;
+    width: 4rem;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
 }

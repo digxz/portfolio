@@ -14,6 +14,7 @@
   color: #986dff;
 }
 
+/* mobile */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .apresentation__text {
     font-size: 2rem;
@@ -22,6 +23,7 @@
   }
 }
 
+/* small displays */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .apresentation__text {
     font-size: 2rem;
@@ -30,9 +32,26 @@
   }
 }
 
+/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .apresentation__text {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin: 15rem 3rem 0;
   }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .apresentation__text {
+    font-size: 3.3rem;
+    margin: 15rem 3rem 0;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
 }

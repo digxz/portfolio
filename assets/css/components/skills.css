@@ -25,6 +25,7 @@
   height: 10rem;
 }
 
+/* mobile */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #skills__title {
     padding: 5rem 0 1rem 0;
@@ -49,6 +50,7 @@
   }
 }
 
+/* small displays */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .skills {
     display: grid;
@@ -59,6 +61,7 @@
   }
 }
 
+/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .skills {
     display: grid;
@@ -67,4 +70,23 @@
 
     margin: auto;
   }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+
+    margin: auto;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
 }

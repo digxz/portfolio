@@ -137,6 +137,9 @@ a {
 
 /* bigger tablets and notebooks */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  .titles {
+    font-size: 2.5rem;
+  }
 }
 
 /* desktops */

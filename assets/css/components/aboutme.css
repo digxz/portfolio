@@ -43,6 +43,7 @@
   -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
 }
 
+/* mobile */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about {
     font-size: 1.1rem;
@@ -63,6 +64,7 @@
   }
 }
 
+/* small displays */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .about {
     font-size: 1.2rem;
@@ -79,6 +81,7 @@
   }
 }
 
+/* tablets  */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .about {
     font-size: 1.4rem;
@@ -93,4 +96,29 @@
   .connect__icons {
     margin: 0.5rem;
   }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .about {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin: 0 10rem;
+  }
+
+  #connect {
+    font-size: 2rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
 }

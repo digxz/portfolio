@@ -83,6 +83,7 @@ form button:hover {
   transform: scale(1.05);
 }
 
+/* mobile */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #contact__title {
     padding: 0;
@@ -107,6 +108,7 @@ form button:hover {
   }
 }
 
+/* small displays */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .contact {
     max-width: 100vw;
@@ -131,6 +133,7 @@ form button:hover {
   }
 }
 
+/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .contact {
     max-width: 100vw;
@@ -153,4 +156,37 @@ form button:hover {
   form label {
     font-size: 2rem;
   }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .contact {
+    max-width: 100vw;
+    margin: 20rem auto;
+  }
+
+  .form {
+    max-width: 100vw;
+  }
+  form label,
+  form input,
+  form textarea {
+    margin: 0 5rem;
+  }
+
+  form button {
+    margin: 4rem 5rem 7rem;
+  }
+
+  form label {
+    font-size: 2rem;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
 }
