@@ -36,8 +36,3 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 - Ele mostra meus principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
     
 ---
-<br>
-
-<h2 align="center">❗ AVISOS ❗</h2>
-
-- O projeto ainda **não** conta com responsividade.
