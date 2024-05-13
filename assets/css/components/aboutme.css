@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 991px) {
   .about {
     font-size: 1.4rem;
     line-height: 2rem;
