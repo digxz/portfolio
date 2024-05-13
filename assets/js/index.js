@@ -1,4 +1,4 @@
-window.revelar = ScrollReveal({ reset: true });
+window.revelar = ScrollReveal({ reset: false });
 
 revelar.reveal(".scroll", {
   duration: 1500,

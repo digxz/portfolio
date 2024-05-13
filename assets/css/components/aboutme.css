@@ -3,13 +3,16 @@
 }
 
 .about {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   line-height: 3.9rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin: 0 15%;
 }
 
 .emphasis {
@@ -45,7 +48,6 @@
     font-size: 1.3rem;
     line-height: 2rem;
     margin: 0 3rem;
-    text-align: left;
   }
 
   #connect {

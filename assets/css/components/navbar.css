@@ -55,7 +55,7 @@ a {
     z-index: 1;
     top: 0;
     left: 0;
-    height: 10rem;
+    height: 15%;
 
     background-color: #111;
   }
@@ -71,7 +71,7 @@ a {
   }
 
   #nav__logo img {
-    margin: 2.9rem 1.5rem 0;
+    margin: 1.8rem 1.8rem 0;
     width: 4rem;
   }
 
