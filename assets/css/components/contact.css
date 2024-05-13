@@ -95,11 +95,11 @@ form button:hover {
   form label,
   form input,
   form textarea {
-    margin: 0 6rem;
+    margin: 0 3rem;
   }
 
   form button {
-    margin: 4rem 6rem 5rem;
+    margin: 4rem 3rem 5rem;
   }
 
   form label {
