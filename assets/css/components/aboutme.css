@@ -35,7 +35,6 @@
 
 .connect__icons a img {
   height: 5rem;
-  transition: 0.5s ease;
 
   cursor: url("/assets/images/cursor/handpointing.png"), pointer;
   -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
@@ -43,8 +42,13 @@
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 0 3rem;
+    text-align: left;
+  }
+
+  #connect {
     font-size: 2rem;
-    line-height: 3.9rem;
-    margin: 0;
   }
 }
