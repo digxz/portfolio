@@ -18,7 +18,7 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .apresentation__text {
     font-size: 2rem;
-    margin: 13rem 3rem 0;
-    padding: 0;
+    margin: 11rem 2rem 0 3rem;
+    padding: 0 0 3rem;
   }
 }

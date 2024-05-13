@@ -41,7 +41,11 @@
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .projects {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+
+    margin: auto;
   }
 
   .project__card {

@@ -45,12 +45,20 @@
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .about {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 2rem;
-    margin: 0 3rem;
+    margin: 0 rem;
   }
 
   #connect {
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+
+  .connect__icons {
+    margin: 0;
+  }
+
+  .connect__icons a img {
+    height: 4rem;
   }
 }

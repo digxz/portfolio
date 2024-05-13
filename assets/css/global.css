@@ -105,4 +105,11 @@ a {
   .scroll__top.active {
     visibility: hidden;
   }
+
+  .titles {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    visibility: hidden;
+  }
 }
