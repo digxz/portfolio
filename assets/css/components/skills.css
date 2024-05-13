@@ -38,18 +38,22 @@
   }
 
   .skills__cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     width: 10rem;
     height: 10rem;
-    background-color: #151515;
-    border: solid 1px #1f1f1f;
   }
 
   .skills__cards img {
     width: 7rem;
     height: 7rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+
+    margin: auto;
   }
 }

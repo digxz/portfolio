@@ -49,15 +49,21 @@
   }
 
   .project__card {
-    display: flex;
-    flex-direction: column;
+    width: 80vw;
+    height: 13rem;
+  }
+}
 
-    color: #b798ff;
-    font-size: 2rem;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
 
-    width: 90vw;
+    margin: auto;
+  }
+
+  .project__card {
     height: 15rem;
-    background-color: #151515;
-    border: solid 1px #b798ff;
   }
 }

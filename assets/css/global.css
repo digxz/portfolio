@@ -110,6 +110,22 @@ a {
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
-    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .scroll__top {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .scroll__top img {
+    width: 3rem;
+  }
+
+  .titles {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
   }
 }
