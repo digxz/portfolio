@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+.navbar {
+  width: 100%;
+}
+
 #nav__logo img {
   position: absolute;
   margin: 3rem 0 0 13rem;
@@ -45,12 +49,10 @@ a {
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
- 
   .navbar {
     position: fixed;
 
-    border: 1px solid red;
-
+    z-index: 1;
     top: 0;
     left: 0;
     height: 10rem;
@@ -62,13 +64,14 @@ a {
     list-style: none;
     gap: 1rem;
 
-    margin: 3rem 0 0 15rem;
+    margin: 3.9rem 1rem 0 0;
     padding: 0;
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   #nav__logo img {
-    margin: 2rem 3rem 0;
+    margin: 2.9rem 1.5rem 0;
+    width: 4rem;
   }
 
   .nav__itens {

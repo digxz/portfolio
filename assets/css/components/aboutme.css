@@ -10,9 +10,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border: 2px solid red;
-  padding: 0rem 12rem 0rem 12rem;
 }
 
 .emphasis {
@@ -48,6 +45,6 @@
   .about {
     font-size: 2rem;
     line-height: 3.9rem;
-    margin: 0 0;
+    margin: 0;
   }
 }
