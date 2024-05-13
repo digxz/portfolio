@@ -6,7 +6,7 @@
 
 <br><br>
 
-<h2 align="center"> 📚 Seções</h2>
+<h2 align="center">📍 Seções</h2>
 
 O projeto é composto por cinco seções:
 
@@ -19,7 +19,7 @@ O projeto é composto por cinco seções:
 ---
 <br>
 
-<h2 align="center">💼 Tecnologias Utilizadas</h2>
+<h2 align="center">💻 Tecnologias Utilizadas</h2>
 
 Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 
@@ -30,9 +30,19 @@ Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
 ---
 <br>
 
-<h2 align="center">📖 Finalidade do Projeto</h2>
+<h2 align="center">📚 Libraries Utilizadas</h2>
 
-- O projeto foi desenvolvido pensando na apresentação pessoal.
+Para o desenvolvimento deste projeto utilizei as seguintes libraries:
+
+- ScrollReveal;
+- Typed.js.
+  
+---
+<br>
+
+<h2 align="center">✅ Finalidade do Projeto</h2>
+
+- O projeto foi desenvolvido pensando na apresentação profissional.
 - Ele mostra meus principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
     
 ---
