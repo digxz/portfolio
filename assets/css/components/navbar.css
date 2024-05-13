@@ -68,10 +68,6 @@ a {
     margin: 1.8rem 1.8rem 0;
     width: 4rem;
   }
-
-  .nav__itens {
-    align-items: end;
-  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -97,8 +93,23 @@ a {
     margin: 1.8rem 1.8rem 0;
     width: 4rem;
   }
+}
 
-  .nav__itens {
-    align-items: end;
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* .navbar {
+    position: fixed;
+    background-color: red;
+  } */
+
+  .navbar ul {
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin: 4rem 1.7rem;
+    padding: 0;
+  }
+
+  #nav__logo img {
+    margin: 1.8rem 1.8rem 0;
+    width: 4rem;
   }
 }
