@@ -9,7 +9,7 @@ revelar.reveal(".titles", {
 });
 
 var typed = new Typed("#type_effect", {
-  strings: ["Student", "Programmer", "Web Developer"],
+  strings: ["Student", "Programmer", "Intern"],
   startDelay: 1000,
   backDelay: 1500,
   typeSpeed: 150,
