@@ -5,6 +5,7 @@
 .about p {
   margin: 1rem 0;
   color: #e0e0e0;
+  line-height: 3rem;
 }
 
 .sub-about {
