@@ -32,7 +32,7 @@
 form label {
   font-size: 1.8rem;
   margin: 0 0 0.3rem;
-  color: #b798ff;
+  color: #f88104;
 
   font-family: "Archivo", sans-serif;
 }
@@ -71,7 +71,7 @@ form button {
   font-size: 1rem;
   background-color: transparent;
   border: 1px solid;
-  color: #b798ff;
+  color: #f88104;
   transition: all 1s;
 
   cursor: url("/assets/images/cursor/handpointing.png"), pointer;

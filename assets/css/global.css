@@ -49,12 +49,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #986dff;
+  background-color: #f88104;
   border-radius: 10rem;
 }
 
 ::selection {
-  background-color: #b798ff;
+  background-color: #f88104;
   color: #f1f1f1;
 }
 

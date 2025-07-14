@@ -15,13 +15,13 @@
   display: flex;
   flex-direction: column;
 
-  color: #b798ff;
+  color: #f88104;
   font-size: 2rem;
 
   width: 22rem;
   height: 15rem;
   background-color: #151515;
-  border: solid 1px #b798ff;
+  border: solid 1px #f88104;
 }
 
 .card__title {
@@ -36,8 +36,8 @@
   margin: 1rem 1rem 0 2rem;
 }
 
-.card__links {
-}
+/* .card__links {
+} */
 
 /* mobile */
 @media screen and (min-width: 320px) and (max-width: 480px) {

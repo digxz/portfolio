@@ -9,7 +9,7 @@ a {
 #nav__logo img {
   position: absolute;
   margin: 3rem 0 0 13rem;
-  width: 5rem;
+  width: 7rem;
 }
 
 .navbar ul {
@@ -31,7 +31,7 @@ a {
 .nav__itens a:after {
   content: "";
   position: absolute;
-  background-color: #b798ff;
+  background-color: #f88104;
   height: 3px;
   width: 0;
   left: 0;
@@ -41,7 +41,7 @@ a {
 
 .nav__itens a:hover {
   transition: 0.5s;
-  color: #b798ff;
+  color: #f88104;
 }
 
 .nav__itens a:hover:after {
