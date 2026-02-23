@@ -32,9 +32,9 @@
 form label {
   font-size: 1.8rem;
   margin: 0 0 0.3rem;
-  color: #f88104;
+  color: #f1f1f1;
+  font-weight: 700;
 
-  font-family: "Archivo", sans-serif;
 }
 
 form input {
@@ -107,7 +107,7 @@ form button:hover {
   }
 
   form label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -136,7 +136,7 @@ form button:hover {
   }
 
   form label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -165,7 +165,7 @@ form button:hover {
   }
 
   form label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -190,7 +190,7 @@ form button:hover {
   }
 
   form label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -215,7 +215,7 @@ form button:hover {
   }
 
   form label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -235,6 +235,6 @@ form button:hover {
   }
 
   form label {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
