@@ -4,24 +4,24 @@
 
 .about p {
   margin: 1rem 0;
-  color: #e0e0e0;
+  color: var(--color-text-body);
   line-height: 3rem;
 }
 
 .sub-about {
   font-size: 1.7rem;
   line-height: 3rem;
-
   margin-top: 4rem;
+  color: var(--color-text-body);
 }
 
 .emphasis {
-  color: #f88104;
+  color: var(--color-accent);
 }
 
 #connect {
   padding: 5rem 0 0;
-  color: #797e87;
+  color: var(--color-text-muted);
   text-align: center;
   font-size: 2rem;
 }
@@ -30,17 +30,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 4rem;
-
   margin: 1rem 0 10rem;
 }
 
 .connect__icons a img {
   height: 5rem;
-
   cursor: url("/assets/images/cursor/handpointing.png"), pointer;
-  -webkit-cursor: url("/assets/images/cursor/handpointing.png"), pointer;
 }
 
 /* mobile */
@@ -87,7 +83,7 @@
   }
 }
 
-/* tablets  */
+/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .about {
     font-size: 1.4rem;
