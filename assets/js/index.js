@@ -3,35 +3,13 @@ window.revelar = ScrollReveal({ reset: false });
 revelar.reveal(".scroll",  { duration: 1500 });
 revelar.reveal(".titles",  { duration: 1500 });
 
-// ─── Typed.js strings por idioma ────────────────────────────────
-const typedStrings = {
-  "pt-BR": ["Estudante", "Estagiário", "Analista de Dados"],
-  "en":    ["Student",   "Intern",     "Data Analyst"],
-  "es":    ["Estudiante","Pasante",    "Analista de Datos"],
-};
-
-let typedInstance = null;
-
-function initTyped(lang) {
-  if (typedInstance) typedInstance.destroy();
-  typedInstance = new Typed("#type_effect", {
-    strings:    typedStrings[lang] || typedStrings["en"],
-    startDelay: 500,
-    backDelay:  1500,
-    typeSpeed:  150,
-    backSpeed:  150,
-    loop:       true,
-    loopCount:  Infinity,
-  });
-}
-
 // ─── Traduções ───────────────────────────────────────────────────
 const i18n = {
   "pt-BR": {
     nav_about:      "sobre mim",
     nav_projects:   "projetos",
     greeting:       "Olá! Eu sou o",
-    and_im:         "E sou",
+    subtitle:       "Engenheiro de Dados",
     about_title:    "sobre mim",
     about_p1:       "Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no",
     about_p2:       "Atualmente estou cursando o Ensino Superior em",
@@ -46,7 +24,7 @@ const i18n = {
     nav_about:      "about me",
     nav_projects:   "projects",
     greeting:       "Hi! I'm",
-    and_im:         "And I'm a",
+    subtitle:       "Data Engineer",
     about_title:    "about me",
     about_p1:       "My name is Diego Ramirez, and I'm a Data Analysis Intern at",
     about_p2:       "I'm currently pursuing a degree in",
@@ -61,7 +39,7 @@ const i18n = {
     nav_about:      "sobre mí",
     nav_projects:   "proyectos",
     greeting:       "¡Hola! Soy",
-    and_im:         "Y soy",
+    subtitle:       "Ingeniero de Datos",
     about_title:    "sobre mí",
     about_p1:       "Mi nombre es Diego Ramirez, y soy un Pasante de Análisis de Datos en",
     about_p2:       "Actualmente curso la educación superior en",
@@ -88,7 +66,7 @@ function applyLang(lang) {
 
   // apresentation
   document.getElementById("greeting").textContent = t.greeting;
-  document.getElementById("and_im").textContent   = t.and_im;
+  document.getElementById("subtitle").textContent = t.subtitle;
 
   // about me
   document.getElementById("aboutme__title").textContent = t.about_title;
@@ -112,8 +90,7 @@ function applyLang(lang) {
   // html lang
   document.documentElement.lang = lang;
 
-  // mark active on ALL lang buttons (desktop + mobile)
-  // and reorder desktop switcher so active is always first
+  // mark active on ALL lang buttons
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
@@ -125,10 +102,6 @@ function applyLang(lang) {
     if (activeBtn) switcher.insertBefore(activeBtn, switcher.firstChild);
   }
 
-  // re-init typed
-  initTyped(lang);
-
-  // persist
   localStorage.setItem("lang", lang);
 }
 
@@ -146,8 +119,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // hamburger
-  const hamburger   = document.getElementById("hamburger");
-  const mobileMenu  = document.getElementById("mobile-menu");
+  const hamburger  = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
 
   function closeMobileMenu() {
     hamburger.classList.remove("open");
@@ -161,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
-  // fecha ao clicar em links do drawer
   mobileMenu.querySelectorAll("a").forEach(a => {
     a.addEventListener("click", closeMobileMenu);
   });

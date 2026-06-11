@@ -18,8 +18,14 @@
   font-size: 2rem;
   width: 22rem;
   height: 15rem;
-  background-color: var(--color-bg-card);
+  background-color: #1c1c1c;
   border: solid 1px var(--color-accent);
+  border-radius: 8px;
+  transition: background-color .25s ease;
+}
+
+.project__card:hover {
+  background-color: #252525;
 }
 
 .card__title {

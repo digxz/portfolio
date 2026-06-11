@@ -13,6 +13,8 @@ O projeto é composto pelas seguintes seções:
 - **Home:** Home do Portfolio;
 - **About Me:** Apresenta informações sobre mim;
 - **Projects:** Seção que apresenta os projetos;
+- ~~**Skills:** Apresenta as habilidades e tecnologias que domino;~~ *(em breve — será reativada após a conclusão dos projetos)*
+- ~~**Contact:** Formulário para entrar em contato!~~ *(em breve — será reativada em versão futura)*
 
 ---
 <br>
