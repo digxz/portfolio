@@ -1,0 +1,152 @@
+#aboutme__title {
+  padding: 5rem 0 0 0;
+}
+
+.about p {
+  margin: 1rem 0;
+  color: var(--color-text-body);
+  line-height: 3rem;
+}
+
+.sub-about {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  margin-top: 4rem;
+  color: var(--color-text-body);
+}
+
+.emphasis {
+  color: var(--color-accent);
+}
+
+#connect {
+  padding: 5rem 0 0;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.connect__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin: 1rem 0 10rem;
+}
+
+.connect__icons a img {
+  height: 5rem;
+  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+}
+
+/* mobile */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .about {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 0 3rem;
+  }
+
+  .sub-about {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    line-height: 2rem;
+  }
+
+  #connect {
+    font-size: 1.5rem;
+  }
+
+  .connect__icons {
+    margin: 0;
+  }
+
+  .connect__icons a img {
+    height: 4rem;
+  }
+}
+
+/* small displays */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 0 6rem;
+  }
+
+  #connect {
+    font-size: 1.7rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}
+
+/* tablets */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .about {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin: 0 8rem;
+  }
+
+  #connect {
+    font-size: 1.7rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .about {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin: 0 10rem;
+  }
+
+  #connect {
+    font-size: 2rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .about {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin: 0 20%;
+  }
+
+  #connect {
+    font-size: 2rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
+  .about {
+    font-size: 2.2rem;
+    line-height: 2rem;
+    margin: 0 25%;
+  }
+
+  #connect {
+    font-size: 2.3rem;
+  }
+
+  .connect__icons {
+    margin: 0.5rem;
+  }
+}

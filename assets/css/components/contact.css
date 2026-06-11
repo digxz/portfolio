@@ -1,0 +1,126 @@
+#contact__title {
+  padding: 2rem 0 5rem 0;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 43.7rem;
+  padding: 0 1.5rem;
+}
+
+.form > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form label {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 0.3rem;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+form input {
+  padding: 0.9rem;
+  outline: none;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  transition: all 0.5s;
+  color: #111111;
+  border-radius: 1rem;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  cursor: url("/assets/images/cursor/textcursor.png"), text;
+}
+
+form textarea {
+  padding: 0.9rem;
+  outline: none;
+  font-size: 1rem;
+  color: #111111;
+  border-radius: 1rem;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  cursor: url("/assets/images/cursor/textcursor.png"), text;
+}
+
+form button {
+  margin: 3rem 0 5rem;
+  padding: 0.9rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid;
+  color: var(--color-accent);
+  transition: all 1s;
+  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
+}
+
+form button:hover {
+  transition: 0.8s;
+  transform: scale(1.05);
+}
+
+/* mobile */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #contact__title {
+    padding: 0;
+  }
+
+  form label {
+    font-size: 1.4rem;
+  }
+}
+
+/* small displays */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .contact {
+    margin: 3rem auto;
+  }
+
+  form label {
+    font-size: 1.4rem;
+  }
+}
+
+/* tablets */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .contact {
+    margin: 3rem auto;
+  }
+
+  form label {
+    font-size: 1.4rem;
+  }
+}
+
+/* bigger tablets and notebooks */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  form label {
+    font-size: 1.4rem;
+  }
+}
+
+/* desktops */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  form label {
+    font-size: 1.4rem;
+  }
+}
+
+/* bigger displays */
+@media screen and (min-width: 1920px) {
+  form label {
+    font-size: 1.4rem;
+  }
+}

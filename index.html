@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Diego Ramirez — Estagiário de Análise de Dados no Itaú, estudante de Data Science na FIAP.">
+  <meta property="og:title" content="Diego Ramirez — Data Science Portfolio">
+  <meta property="og:description" content="Estagiário de Análise de Dados no Itaú, estudante de Data Science na FIAP.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="assets/css/extends.css" />
+  <link rel="icon" href="assets/images/icon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Sedan+SC&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+  <title>digxz</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <!-- lang switcher — desktop (hover expande) -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="pt-BR">PT</button>
+      <button class="lang-btn"        data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="es">ES</button>
+    </div>
+
+    <!-- nav links — desktop -->
+    <ul>
+      <li class="nav__itens"><a id="nav_about"    href="#aboutme__title">sobre mim</a></li>
+      <li class="nav__itens"><a id="nav_projects" href="#projects__title">projetos</a></li>
+    </ul>
+
+    <!-- hamburger — mobile only -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- mobile drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a id="mob_about"    href="#aboutme__title">sobre mim</a>
+    <a id="mob_projects" href="#projects__title">projetos</a>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="pt-BR">PT</button>
+      <button class="lang-btn"        data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="es">ES</button>
+    </div>
+  </div>
+
+  <main class="main__content">
+    <div class="apresentation__text">
+      <span id="greeting">Olá! Eu sou o</span>
+      <span class="apresentation__emphasis"> Diego</span>!<br>
+      <span id="and_im">E sou</span>
+      <span id="type_effect" class="apresentation__emphasis"></span>
+    </div>
+
+    <p id="aboutme__title" class="titles">sobre mim</p>
+    <section class="about scroll">
+      <p id="about_p1">
+        Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú</span>!
+      </p>
+      <p id="about_p2">
+        Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!
+      </p>
+      <div id="sub_about" class="sub-about">
+        Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha),
+        o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive
+        minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.
+      </div>
+    </section>
+
+    <h2 id="connect">Conecte-se comigo e saiba mais!</h2>
+    <section>
+      <div class="connect__icons">
+        <a href="https://www.linkedin.com/in/diegocastelliniramirez/" aria-label="Ver perfil no LinkedIn">
+          <img src="assets/images/linkedin-logo.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/digxz" aria-label="Ver perfil no GitHub">
+          <img src="assets/images/github-logo.svg" alt="GitHub">
+        </a>
+      </div>
+    </section>
+
+    <p id="projects__title" class="titles">projetos</p>
+    <section class="projects scroll">
+      <div class="project__card">
+        <h2 class="card__title" data-card-index="1">Projeto 01</h2>
+        <p class="card__description">Projeto em desenvolvimento...</p>
+      </div>
+      <div class="project__card">
+        <h2 class="card__title" data-card-index="2">Projeto 02</h2>
+        <p class="card__description">Projeto em desenvolvimento...</p>
+      </div>
+      <div class="project__card">
+        <h2 class="card__title" data-card-index="3">Projeto 03</h2>
+        <p class="card__description">Projeto em desenvolvimento...</p>
+      </div>
+      <div class="project__card">
+        <h2 class="card__title" data-card-index="4">Projeto 04</h2>
+        <p class="card__description">Projeto em desenvolvimento...</p>
+      </div>
+      <div class="project__card">
+        <h2 class="card__title" data-card-index="5">Projeto 05</h2>
+        <p class="card__description">Projeto em desenvolvimento...</p>
+      </div>
+      <div class="project__card">
+        <h2 class="card__title" data-card-index="6">Projeto 06</h2>
+        <p class="card__description">Projeto em desenvolvimento...</p>
+      </div>
+    </section>
+
+    <!-- skills — serão reativadas após a conclusão dos projetos
+    <p id="skills__title" class="titles">skills</p>
+    <section class="skills scroll">
+      <div class="skills__cards"><img src="assets/images/technologies/html.svg" alt="HTML"></div>
+      <div class="skills__cards"><img src="assets/images/technologies/css.svg" alt="CSS"></div>
+      <div class="skills__cards"><img src="assets/images/technologies/javascript.svg" alt="JavaScript"></div>
+      <div class="skills__cards"><img src="assets/images/technologies/git.svg" alt="Git"></div>
+    </section>
+    -->
+
+    <!-- contact — será reativado em versão futura
+    <p id="contact__title" class="titles">contact</p>
+    <section class="contact scroll"> ... </section>
+    -->
+
+  </main>
+
+  <script src="assets/js/index.js" defer></script>
+</body>
+
+</html>
