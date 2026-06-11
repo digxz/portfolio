@@ -24,17 +24,35 @@
 
 <body>
   <nav class="navbar">
+    <!-- lang switcher — desktop (hover expande) -->
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="pt-BR">PT</button>
       <button class="lang-btn"        data-lang="en">EN</button>
       <button class="lang-btn"        data-lang="es">ES</button>
     </div>
 
+    <!-- nav links — desktop -->
     <ul>
       <li class="nav__itens"><a id="nav_about"    href="#aboutme__title">sobre mim</a></li>
       <li class="nav__itens"><a id="nav_projects" href="#projects__title">projetos</a></li>
     </ul>
+
+    <!-- hamburger — mobile only -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- mobile drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a id="mob_about"    href="#aboutme__title">sobre mim</a>
+    <a id="mob_projects" href="#projects__title">projetos</a>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="pt-BR">PT</button>
+      <button class="lang-btn"        data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="es">ES</button>
+    </div>
+  </div>
 
   <main class="main__content">
     <div class="apresentation__text">

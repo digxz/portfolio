@@ -1,5 +1,6 @@
 a { text-decoration: none; }
 
+/* ── Base navbar ── */
 .navbar {
   width: 100%;
   display: flex;
@@ -9,9 +10,10 @@ a { text-decoration: none; }
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
+/* ── Nav links (desktop) ── */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -37,29 +39,27 @@ a { text-decoration: none; }
   transition: 0.5s;
 }
 
-.nav__itens a:hover {
-  color: var(--color-accent);
-  transition: 0.5s;
-}
-
+.nav__itens a:hover { color: var(--color-accent); transition: 0.5s; }
 .nav__itens a:hover::after { width: 100%; }
 
-/* ── Lang switcher ── */
+/* ── Lang switcher — desktop hover expand ── */
 .lang-switcher {
   display: flex;
-  gap: .5rem;
+  align-items: center;
+  gap: .3rem;
 }
 
 .lang-btn {
   background: transparent;
   border: 1px solid var(--color-text-muted);
-  border-radius: 4px;
+  border-radius: 3px;
   color: var(--color-text-muted);
   font-family: "Archivo", sans-serif;
-  font-size: .85rem;
-  padding: .25rem .55rem;
+  font-size: .7rem;
+  padding: .15rem .38rem;
   cursor: pointer;
-  transition: all .3s;
+  transition: opacity .25s ease, border-color .25s, color .25s;
+  white-space: nowrap;
 }
 
 .lang-btn:hover,
@@ -68,43 +68,122 @@ a { text-decoration: none; }
   color: var(--color-accent);
 }
 
-/* ── mobile ── */
-@media screen and (max-width: 480px) {
+/* inactive ocultos, mas mantêm o espaço (sem deslocar o ativo) */
+.lang-btn:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* hover no container revela todos no mesmo lugar */
+.lang-switcher:hover .lang-btn:not(.active) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Hamburger (mobile only — oculto no desktop) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: all .35s ease;
+}
+
+/* animação X */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile drawer ── */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 5.5rem 2rem 2rem;
+  z-index: 150;
+  transform: translateY(-110%);
+  transition: transform .35s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  font-size: 1.6rem;
+  color: var(--color-text-muted);
+  padding: .9rem 0;
+  width: 100%;
+  border-bottom: 1px solid #222;
+}
+
+.mobile-menu a:hover { color: var(--color-accent); }
+
+.mobile-menu .mobile-lang {
+  display: flex;
+  gap: .6rem;
+  margin-top: 1.4rem;
+}
+
+.mobile-menu .lang-btn {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  font-size: .9rem;
+  padding: .3rem .65rem;
+}
+
+/* ── Responsivo ── */
+
+/* mobile */
+@media screen and (max-width: 768px) {
   .navbar {
     position: fixed;
     background-color: var(--color-bg);
-    padding: 1.4rem 5%;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1.2rem 5%;
+    z-index: 200;
   }
 
-  .navbar ul {
-    font-size: 1.2rem;
-    gap: 1.2rem;
-  }
+  /* oculta nav links e lang switcher normais */
+  .navbar ul,
+  .lang-switcher { display: none; }
 
-  .lang-btn { font-size: .85rem; padding: .25rem .5rem; }
+  /* mostra hamburger */
+  .hamburger { display: flex; }
+
+  /* mostra mobile menu */
+  .mobile-menu { display: flex; }
 }
 
-/* ── small displays ── */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    background-color: var(--color-bg);
-    padding: 1.6rem 5%;
-  }
-
-  .navbar ul { font-size: 1.3rem; gap: 1.4rem; }
-  .lang-btn  { font-size: .9rem; }
-}
-
-/* ── tablets ── */
+/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .navbar { padding: 2rem 5%; }
   .navbar ul { font-size: 1.5rem; gap: 1.8rem; }
 }
 
-/* ── notebooks ── */
+/* notebooks */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .navbar ul { font-size: 1.6rem; }
 }

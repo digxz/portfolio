@@ -78,9 +78,13 @@ function applyLang(lang) {
   const t = i18n[lang];
   if (!t) return;
 
-  // nav
+  // nav desktop
   document.getElementById("nav_about").textContent    = t.nav_about;
   document.getElementById("nav_projects").textContent = t.nav_projects;
+
+  // nav mobile drawer
+  document.getElementById("mob_about").textContent    = t.nav_about;
+  document.getElementById("mob_projects").textContent = t.nav_projects;
 
   // apresentation
   document.getElementById("greeting").textContent = t.greeting;
@@ -105,13 +109,21 @@ function applyLang(lang) {
     el.textContent = t.card_wip;
   });
 
-  // html lang attribute + meta description
+  // html lang
   document.documentElement.lang = lang;
 
-  // lang switcher — mark active button
+  // mark active on ALL lang buttons (desktop + mobile)
+  // and reorder desktop switcher so active is always first
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+
+  // reorder desktop switcher: put active btn first
+  const switcher = document.querySelector(".lang-switcher");
+  if (switcher) {
+    const activeBtn = switcher.querySelector(`.lang-btn[data-lang="${lang}"]`);
+    if (activeBtn) switcher.insertBefore(activeBtn, switcher.firstChild);
+  }
 
   // re-init typed
   initTyped(lang);
@@ -125,7 +137,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("lang") || "pt-BR";
   applyLang(saved);
 
+  // lang buttons (desktop + mobile)
   document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+    btn.addEventListener("click", () => {
+      applyLang(btn.dataset.lang);
+      closeMobileMenu();
+    });
+  });
+
+  // hamburger
+  const hamburger   = document.getElementById("hamburger");
+  const mobileMenu  = document.getElementById("mobile-menu");
+
+  function closeMobileMenu() {
+    hamburger.classList.remove("open");
+    mobileMenu.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  hamburger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  });
+
+  // fecha ao clicar em links do drawer
+  mobileMenu.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", closeMobileMenu);
   });
 });
