@@ -8,41 +8,46 @@
 
 <h2 align="center">📍 Seções</h2>
 
-O projeto é composto por cinco seções:
+O projeto é composto pelas seguintes seções:
 
 - **Home:** Home do Portfolio;
 - **About Me:** Apresenta informações sobre mim;
 - **Projects:** Seção que apresenta os projetos;
-- **Skills:** Apresenta as habilidades e tecnologias que domino;
-- **Contact:** Formulário para entrar em contato!
+- ~~**Skills:** Apresenta as habilidades e tecnologias que domino;~~ *(em breve — será reativada após a conclusão dos projetos)*
+- ~~**Contact:** Formulário para entrar em contato!~~ *(em breve — será reativada em versão futura)*
+
+---
+<br>
+
+<h2 align="center">🌐 Idiomas</h2>
+
+O portfólio conta com suporte nativo a múltiplos idiomas, alternáveis diretamente pela interface:
+
+- 🇧🇷 Português (PT-BR)
+- 🇺🇸 Inglês (EN)
+- 🇪🇸 Espanhol (ES)
 
 ---
 <br>
 
 <h2 align="center">💻 Tecnologias Utilizadas</h2>
 
-Para o desenvolvimento deste projeto utilizei as seguintes tecnologias:
-
 - HTML;
 - CSS;
 - Javascript.
-  
+
 ---
 <br>
 
 <h2 align="center">📚 Libraries Utilizadas</h2>
 
-Para o desenvolvimento deste projeto utilizei as seguintes libraries:
-
 - ScrollReveal;
 - Typed.js.
-  
+
 ---
 <br>
 
 <h2 align="center">✅ Finalidade do Projeto</h2>
 
 - O projeto foi desenvolvido pensando na apresentação profissional.
-- Ele mostra meus principais projetos e habilidades, e também permite que o usuário entre em contato comigo.
-    
----
+- Ele mostra meus principais projetos, e futuramente exibirá minhas habilidades e permitirá que o usuário entre em contato comigo.

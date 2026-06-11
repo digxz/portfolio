@@ -24,32 +24,35 @@
 
 <body>
   <nav class="navbar">
-    <!-- <div id="nav__logo"><img src="assets/images/icon.svg" alt=""></div> -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="pt-BR">PT</button>
+      <button class="lang-btn"        data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="es">ES</button>
+    </div>
+
     <ul>
-      <li class="nav__itens"><a href="#aboutme__title">about me</a></li>
-      <li class="nav__itens"><a href="#projects__title">projects</a></li>
-      <!-- <li class="nav__itens"><a href="#skills__title">skills</a></li> -->
-      <li class="nav__itens"><a href="#contact__title">contact</a></li>
+      <li class="nav__itens"><a id="nav_about"    href="#aboutme__title">sobre mim</a></li>
+      <li class="nav__itens"><a id="nav_projects" href="#projects__title">projetos</a></li>
     </ul>
   </nav>
 
   <main class="main__content">
     <div class="apresentation__text">
-      Hi! I'm
-      <span class="apresentation__emphasis">Diego</span>! <br />And I'm a <span id="type_effect"
-        class="apresentation__emphasis"></span>
+      <span id="greeting">Olá! Eu sou o</span>
+      <span class="apresentation__emphasis"> Diego</span>!<br>
+      <span id="and_im">E sou</span>
+      <span id="type_effect" class="apresentation__emphasis"></span>
     </div>
 
-    <p id="aboutme__title" class="titles">about me</p>
+    <p id="aboutme__title" class="titles">sobre mim</p>
     <section class="about scroll">
-      <p>
+      <p id="about_p1">
         Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú</span>!
-        <br>
-        <br>
-        Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span
-          class="emphasis">FIAP</span>!
       </p>
-      <div class="sub-about">
+      <p id="about_p2">
+        Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!
+      </p>
+      <div id="sub_about" class="sub-about">
         Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha),
         o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive
         minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.
@@ -68,82 +71,50 @@
       </div>
     </section>
 
-    <p id="projects__title" class="titles">projects</p>
+    <p id="projects__title" class="titles">projetos</p>
     <section class="projects scroll">
       <div class="project__card">
-        <h2 class="card__title">Projeto 01</h2>
+        <h2 class="card__title" data-card-index="1">Projeto 01</h2>
         <p class="card__description">Projeto em desenvolvimento...</p>
       </div>
       <div class="project__card">
-        <h2 class="card__title">Projeto 02</h2>
+        <h2 class="card__title" data-card-index="2">Projeto 02</h2>
         <p class="card__description">Projeto em desenvolvimento...</p>
       </div>
       <div class="project__card">
-        <h2 class="card__title">Projeto 03</h2>
+        <h2 class="card__title" data-card-index="3">Projeto 03</h2>
         <p class="card__description">Projeto em desenvolvimento...</p>
       </div>
       <div class="project__card">
-        <h2 class="card__title">Projeto 04</h2>
+        <h2 class="card__title" data-card-index="4">Projeto 04</h2>
         <p class="card__description">Projeto em desenvolvimento...</p>
       </div>
       <div class="project__card">
-        <h2 class="card__title">Projeto 05</h2>
+        <h2 class="card__title" data-card-index="5">Projeto 05</h2>
         <p class="card__description">Projeto em desenvolvimento...</p>
       </div>
       <div class="project__card">
-        <h2 class="card__title">Projeto 06</h2>
+        <h2 class="card__title" data-card-index="6">Projeto 06</h2>
         <p class="card__description">Projeto em desenvolvimento...</p>
       </div>
     </section>
 
-    <!-- <p id="skills__title" class="titles">skills</p>
+    <!-- skills — serão reativadas após a conclusão dos projetos
+    <p id="skills__title" class="titles">skills</p>
     <section class="skills scroll">
-      <div class="skills__cards">
-        <img src="assets/images/technologies/html.svg" alt="HTML">
-      </div>
-      <div class="skills__cards">
-        <img src="assets/images/technologies/css.svg" alt="CSS">
-      </div>
-      <div class="skills__cards">
-        <img src="assets/images/technologies/javascript.svg" alt="JavaScript">
-      </div>
-      <div class="skills__cards">
-        <img src="assets/images/technologies/git.svg" alt="Git">
-      </div>
-    </section> -->
-
-    <p id="contact__title" class="titles">contact</p>
-    <section class="contact scroll">
-      <div class="form">
-        <form class="form__contact" action="https://api.staticforms.xyz/submit" method="post">
-
-          <label id="nome__contact" for="nome__caixa">Nome: </label>
-          <input id="nome__caixa" type="text" name="name" placeholder="Digite seu nome!" autocomplete="off" required>
-
-          <label for="email__caixa">Email: </label>
-          <input id="email__caixa" type="email" name="email" placeholder="Digite seu e-mail!" autocomplete="off" required>
-
-          <label for="mensagem__caixa">Mensagem: </label>
-          <textarea id="mensagem__caixa" name="message" cols="30" rows="10" placeholder="Deixe uma mensagem!" required></textarea>
-
-          <button type="submit">Enviar</button>
-
-          <!--
-            ATENÇÃO: mova o accessKey para uma variável de ambiente.
-            Exemplo com Vercel Edge Function ou Netlify Function:
-            remova as duas linhas abaixo e faça o POST para /api/contact,
-            onde seu backend injeta a chave via process.env.STATIC_FORMS_KEY
-          -->
-          <input type="hidden" name="accessKey" value="SEU_ACCESS_KEY_AQUI">
-          <input type="hidden" name="redirectTo" value="https://digxz.vercel.app/#contact__title">
-        </form>
-      </div>
+      <div class="skills__cards"><img src="assets/images/technologies/html.svg" alt="HTML"></div>
+      <div class="skills__cards"><img src="assets/images/technologies/css.svg" alt="CSS"></div>
+      <div class="skills__cards"><img src="assets/images/technologies/javascript.svg" alt="JavaScript"></div>
+      <div class="skills__cards"><img src="assets/images/technologies/git.svg" alt="Git"></div>
     </section>
-  </main>
+    -->
 
-  <button class="scroll__top" onclick="backToTop();" aria-label="Voltar ao topo">
-    <img src="assets/images/arrow-up.svg" alt="">
-  </button>
+    <!-- contact — será reativado em versão futura
+    <p id="contact__title" class="titles">contact</p>
+    <section class="contact scroll"> ... </section>
+    -->
+
+  </main>
 
   <script src="assets/js/index.js" defer></script>
 </body>
