@@ -12,9 +12,7 @@ O projeto é composto pelas seguintes seções:
 
 - **Home:** Home do Portfolio;
 - **About Me:** Apresenta informações sobre mim;
-- **Projects:** Seção que apresenta os projetos;
-- ~~**Skills:** Apresenta as habilidades e tecnologias que domino;~~ *(em breve — será reativada após a conclusão dos projetos)*
-- ~~**Contact:** Formulário para entrar em contato!~~ *(em breve — será reativada em versão futura)*
+- **Projects:** Seção que apresenta os projetos.
 
 ---
 <br>
@@ -41,8 +39,7 @@ O portfólio conta com suporte nativo a múltiplos idiomas, alternáveis diretam
 
 <h2 align="center">📚 Libraries Utilizadas</h2>
 
-- ScrollReveal;
-- Typed.js.
+- ScrollReveal.
 
 ---
 <br>
@@ -50,4 +47,4 @@ O portfólio conta com suporte nativo a múltiplos idiomas, alternáveis diretam
 <h2 align="center">✅ Finalidade do Projeto</h2>
 
 - O projeto foi desenvolvido pensando na apresentação profissional.
-- Ele mostra meus principais projetos, e futuramente exibirá minhas habilidades e permitirá que o usuário entre em contato comigo.
+- Ele mostra meus principais projetos e, futuramente, exibirá minhas habilidades.

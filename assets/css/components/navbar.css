@@ -28,19 +28,7 @@ a { text-decoration: none; }
   color: var(--color-text-muted);
 }
 
-.nav__itens a::after {
-  content: "";
-  position: absolute;
-  background-color: var(--color-accent);
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-}
-
 .nav__itens a:hover { color: var(--color-accent); transition: 0.5s; }
-.nav__itens a:hover::after { width: 100%; }
 
 /* ── Lang switcher — desktop hover expand ── */
 .lang-switcher {

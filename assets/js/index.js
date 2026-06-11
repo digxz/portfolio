@@ -15,7 +15,7 @@ const i18n = {
     about_p2:       "Atualmente estou cursando o Ensino Superior em",
     about_p2b:      "na",
     sub_about:      "Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha), o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.",
-    connect:        "Conecte-se comigo e saiba mais!",
+    connect:        "Conecte-se comigo",
     projects_title: "projetos",
     card_project:   "Projeto",
     card_wip:       "Projeto em desenvolvimento...",
@@ -30,7 +30,7 @@ const i18n = {
     about_p2:       "I'm currently pursuing a degree in",
     about_p2b:      "at",
     sub_about:      "I started my career studying Systems Development (ETEC Professor Camargo Aranha), which introduced me to the world of technology and everything it can offer. During this course I had my first formal opportunity in the job market, as an IT Assistant.",
-    connect:        "Connect with me and learn more!",
+    connect:        "Connect with me",
     projects_title: "projects",
     card_project:   "Project",
     card_wip:       "Project under development...",
@@ -45,7 +45,7 @@ const i18n = {
     about_p2:       "Actualmente curso la educación superior en",
     about_p2b:      "en",
     sub_about:      "Comencé mi carrera estudiando Desarrollo de Sistemas (ETEC Professor Camargo Aranha), lo que me permitió conocer el mundo de la tecnología y todo lo que puede ofrecer. Durante ese curso tuve mi primera oportunidad formal en el mercado laboral, como Asistente de TI.",
-    connect:        "¡Conéctate conmigo y descubre más!",
+    connect:        "Conéctate conmigo",
     projects_title: "proyectos",
     card_project:   "Proyecto",
     card_wip:       "Proyecto en desarrollo...",
@@ -89,8 +89,6 @@ function applyLang(lang) {
 
   // html lang
   document.documentElement.lang = lang;
-
-  // mark active on ALL lang buttons
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
@@ -102,13 +100,11 @@ function applyLang(lang) {
     if (activeBtn) switcher.insertBefore(activeBtn, switcher.firstChild);
   }
 
-  localStorage.setItem("lang", lang);
 }
 
 // ─── Boot ────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("lang") || "pt-BR";
-  applyLang(saved);
+  applyLang("pt-BR");
 
   // lang buttons (desktop + mobile)
   document.querySelectorAll(".lang-btn").forEach(btn => {
