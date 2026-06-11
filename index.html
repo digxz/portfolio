@@ -22,30 +22,29 @@
 </head>
 
 <body>
+
+  <!-- ── Navbar desktop ── -->
   <nav class="navbar">
-    <!-- lang switcher — desktop (hover expande) -->
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="pt-BR">PT</button>
       <button class="lang-btn"        data-lang="en">EN</button>
       <button class="lang-btn"        data-lang="es">ES</button>
     </div>
-
-    <!-- nav links — desktop -->
     <ul>
       <li class="nav__itens"><a id="nav_about"    href="#aboutme__title">sobre mim</a></li>
       <li class="nav__itens"><a id="nav_projects" href="#projects__title">projetos</a></li>
+      <li class="nav__itens"><a id="nav_contact"  href="#contact__title">contato</a></li>
     </ul>
-
-    <!-- hamburger — mobile only -->
     <button class="hamburger" id="hamburger" aria-label="Abrir menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- mobile drawer -->
+  <!-- ── Mobile drawer ── -->
   <div class="mobile-menu" id="mobile-menu">
     <a id="mob_about"    href="#aboutme__title">sobre mim</a>
     <a id="mob_projects" href="#projects__title">projetos</a>
+    <a id="mob_contact"  href="#contact__title">contato</a>
     <div class="mobile-lang">
       <button class="lang-btn active" data-lang="pt-BR">PT</button>
       <button class="lang-btn"        data-lang="en">EN</button>
@@ -54,6 +53,8 @@
   </div>
 
   <main class="main__content">
+
+    <!-- ── Hero ── -->
     <div class="apresentation__text">
       <div class="apresentation__greeting">
         <span id="greeting">Olá! Eu sou o</span><span class="apresentation__emphasis"> Diego</span>!
@@ -72,21 +73,15 @@
       </div>
     </div>
 
+    <!-- ── Sobre mim ── -->
     <p id="aboutme__title" class="titles">sobre mim</p>
     <section class="about scroll">
-      <p id="about_p1">
-        Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú</span>!
-      </p>
-      <p id="about_p2">
-        Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!
-      </p>
-      <div id="sub_about" class="sub-about">
-        Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha),
-        o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive
-        minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.
-      </div>
+      <p id="about_p1">Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú</span>!</p>
+      <p id="about_p2">Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!</p>
+      <p id="sub_about" class="sub-about">Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha), o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.</p>
     </section>
 
+    <!-- ── Projetos ── -->
     <p id="projects__title" class="titles">projetos</p>
     <section class="projects scroll">
       <div class="project__card">
@@ -125,10 +120,45 @@
     </section>
     -->
 
-    <!-- contact — será reativado em versão futura
-    <p id="contact__title" class="titles">contact</p>
-    <section class="contact scroll"> ... </section>
-    -->
+    <!-- ── Contato ── -->
+    <section class="contact__section scroll">
+      <p id="contact__title" class="titles">Contato</p>
+      <p id="contact__subtitle" class="contact__subtitle">Tem interesse em uma conversa? Entre em contato comigo!</p>
+
+      <div class="contact__items">
+
+        <!-- Email -->
+        <a href="mailto:diegocastelliniramirez.dcr@gmail.com" class="contact__item" aria-label="Enviar email">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="contact__item-text">diegocastelliniramirez.dcr@gmail.com</span>
+        </a>
+
+        <!-- LinkedIn — usa o SVG do projeto via img + filter -->
+        <a href="https://www.linkedin.com/in/diegocastelliniramirez/" target="_blank" rel="noopener" class="contact__item" aria-label="Ver perfil no LinkedIn">
+          <img src="assets/images/linkedin-logo.svg" alt="" class="contact__icon contact__icon--img">
+          <span class="contact__item-text">LinkedIn</span>
+        </a>
+
+        <!-- GitHub — usa o SVG do projeto via img + filter -->
+        <a href="https://github.com/digxz" target="_blank" rel="noopener" class="contact__item" aria-label="Ver perfil no GitHub">
+          <img src="assets/images/github-logo.svg" alt="" class="contact__icon contact__icon--img">
+          <span class="contact__item-text">GitHub</span>
+        </a>
+
+        <!-- Localização -->
+        <div class="contact__item contact__item--static">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span id="contact__location" class="contact__item-text">Brasil</span>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 

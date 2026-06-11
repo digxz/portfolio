@@ -1,48 +1,49 @@
 #aboutme__title {
-  padding: 5rem 0 0 0;
+  padding: 5rem 0 0;
 }
 
-.about p {
-  margin: 1rem 0;
+/* ── todos os parágrafos do about com fonte e ritmo idênticos ── */
+.about p,
+.about .sub-about {
+  font-size: 1.5rem;
+  line-height: 2.6rem;
   color: var(--color-text-body);
-  line-height: 3rem;
+  margin: 0 0 1.4rem;
 }
 
-.sub-about {
-  font-size: 1.7rem;
-  line-height: 3rem;
-  margin-top: 4rem;
-  color: var(--color-text-body);
+.about .sub-about {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .emphasis { color: var(--color-accent); }
 
 /* ── responsivo ── */
 @media screen and (max-width: 480px) {
-  .about {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    margin: 0 3rem;
-  }
-  .sub-about { font-size: 1.3rem; margin-top: 2rem; line-height: 2rem; }
+  .about { margin: 0 3rem; }
+  .about p, .about .sub-about { font-size: 1.2rem; line-height: 2.2rem; }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .about { font-size: 1.2rem; line-height: 2rem; margin: 0 6rem; }
+  .about { margin: 0 6rem; }
+  .about p, .about .sub-about { font-size: 1.2rem; line-height: 2.2rem; }
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
-  .about { font-size: 1.4rem; line-height: 2rem; margin: 0 8rem; }
+  .about { margin: 0 8rem; }
+  .about p, .about .sub-about { font-size: 1.3rem; line-height: 2.4rem; }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .about { font-size: 1.7rem; line-height: 2rem; margin: 0 10rem; }
+  .about { margin: 0 10rem; }
+  .about p, .about .sub-about { font-size: 1.4rem; line-height: 2.5rem; }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
-  .about { font-size: 1.7rem; line-height: 2rem; margin: 0 20%; }
+  .about { margin: 0 20%; }
 }
 
 @media screen and (min-width: 1920px) {
-  .about { font-size: 2.2rem; line-height: 2rem; margin: 0 25%; }
+  .about { margin: 0 25%; }
+  .about p, .about .sub-about { font-size: 1.8rem; line-height: 3rem; }
 }

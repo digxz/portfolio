@@ -1,19 +1,29 @@
 a { text-decoration: none; }
 
-/* ── Base navbar ── */
+/* ── Base navbar — fixo com glassmorphism ao scroll ── */
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2.8rem 8% 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  background: transparent;
+  transition: background .4s ease, backdrop-filter .4s ease, padding .4s ease, box-shadow .4s ease;
 }
 
-/* ── Nav links (desktop) ── */
+.navbar.scrolled {
+  padding: 1.2rem 8%;
+  background: rgba(17, 17, 17, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(255,255,255,.04);
+}
+
+/* ── Nav links ── */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -30,7 +40,7 @@ a { text-decoration: none; }
 
 .nav__itens a:hover { color: var(--color-accent); transition: 0.5s; }
 
-/* ── Lang switcher — desktop hover expand ── */
+/* ── Lang switcher ── */
 .lang-switcher {
   display: flex;
   align-items: center;
@@ -56,19 +66,17 @@ a { text-decoration: none; }
   color: var(--color-accent);
 }
 
-/* inactive ocultos, mas mantêm o espaço (sem deslocar o ativo) */
 .lang-btn:not(.active) {
   opacity: 0;
   pointer-events: none;
 }
 
-/* hover no container revela todos no mesmo lugar */
 .lang-switcher:hover .lang-btn:not(.active) {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* ── Hamburger (mobile only — oculto no desktop) ── */
+/* ── Hamburger ── */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -92,7 +100,6 @@ a { text-decoration: none; }
   transition: all .35s ease;
 }
 
-/* animação X */
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -115,9 +122,7 @@ a { text-decoration: none; }
   box-shadow: 0 4px 20px rgba(0,0,0,.5);
 }
 
-.mobile-menu.open {
-  transform: translateY(0);
-}
+.mobile-menu.open { transform: translateY(0); }
 
 .mobile-menu a {
   font-size: 1.6rem;
@@ -144,34 +149,39 @@ a { text-decoration: none; }
 }
 
 /* ── Responsivo ── */
-
-/* mobile */
 @media screen and (max-width: 768px) {
   .navbar {
     position: fixed;
-    background-color: var(--color-bg);
     padding: 1.2rem 5%;
+    background: rgba(17, 17, 17, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     z-index: 200;
   }
 
-  /* oculta nav links e lang switcher normais */
+  /* ao scrollar no mobile, leve intensificação */
+  .navbar.scrolled {
+    padding: 1.2rem 5%;
+    background: rgba(17, 17, 17, 0.88);
+  }
+
   .navbar ul,
   .lang-switcher { display: none; }
 
-  /* mostra hamburger */
   .hamburger { display: flex; }
-
-  /* mostra mobile menu */
   .mobile-menu { display: flex; }
 }
 
-/* tablets */
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .navbar { padding: 2rem 5%; }
-  .navbar ul { font-size: 1.5rem; gap: 1.8rem; }
+  .navbar.scrolled { padding: 1rem 5%; }
+  .navbar ul { font-size: 1.3rem; gap: 1.6rem; }
 }
 
-/* notebooks */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar ul { font-size: 1.4rem; gap: 2rem; }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
   .navbar ul { font-size: 1.6rem; }
 }
