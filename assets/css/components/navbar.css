@@ -1,6 +1,20 @@
 a { text-decoration: none; }
 
-/* ── Base navbar — fixo com glassmorphism ao scroll ── */
+/* ── Barra de progresso ── */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-accent);
+  opacity: .55;
+  z-index: 9999;
+  transition: width .1s linear;
+  pointer-events: none;
+}
+
+/* ── Base navbar ── */
 .navbar {
   width: 100%;
   display: flex;
@@ -23,12 +37,25 @@ a { text-decoration: none; }
   box-shadow: 0 1px 0 rgba(255,255,255,.04);
 }
 
+/* ── Logo dr ── */
+.nav__logo {
+  font-family: "Sedan SC", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  letter-spacing: .06em;
+  transition: color .3s ease;
+  flex-shrink: 0;
+}
+
+.nav__logo:hover { color: var(--color-text); }
+
 /* ── Nav links ── */
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 3rem;
-  font-size: 1.4rem;   /* reduzido para notebooks */
+  font-size: 1.4rem;
   margin: 0;
   padding: 0;
 }
@@ -36,46 +63,122 @@ a { text-decoration: none; }
 .nav__itens a {
   position: relative;
   color: var(--color-text-muted);
+  transition: color .3s;
 }
 
-/* hover branco */
-.nav__itens a:hover { color: var(--color-text); transition: 0.5s; }
+.nav__itens a:hover       { color: var(--color-text); }
+.nav__itens a.nav--active { color: var(--color-text); }
 
-/* ── Lang switcher ── */
-.lang-switcher {
+/* ── Lado direito da navbar ── */
+.navbar__right {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: 1.2rem;
+  flex-shrink: 0;
 }
 
-.lang-btn {
+/* ── Dropdown de idioma ── */
+.lang-dropdown {
+  position: relative;
+}
+
+/* trigger: sem borda, fonte e cor iguais aos links do índice */
+.navbar .lang-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
   background: transparent;
-  border: 1px solid var(--color-text-muted);
-  border-radius: 3px;
+  border: none;
   color: var(--color-text-muted);
   font-family: "Archivo", sans-serif;
-  font-size: .7rem;
-  padding: .15rem .38rem;
+  font-size: .85rem;
+  letter-spacing: .04em;
+  padding: .2rem 0;
   cursor: pointer;
-  transition: opacity .25s ease, border-color .25s, color .25s;
+  transition: color .3s;
   white-space: nowrap;
 }
 
-.lang-btn:hover,
-.lang-btn.active {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+/* força herança para derrubar o '* { color: var(--color-text) }' do global */
+.navbar .lang-dropdown__trigger *,
+.navbar .lang-dropdown__menu .lang-opt * {
+  color: inherit;
 }
 
-.lang-btn:not(.active) {
+.navbar .lang-dropdown__globe {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: inherit !important;
+}
+
+.navbar .lang-dropdown__trigger:hover { color: var(--color-text); }
+
+.navbar .lang-dropdown__chevron {
+  width: .55rem;
+  height: .55rem;
+  color: inherit;
+  transition: transform .25s ease;
+  flex-shrink: 0;
+}
+
+.lang-dropdown.open .lang-dropdown__chevron { transform: rotate(180deg); }
+
+/* menu: visibility/opacity para transição suave */
+.lang-dropdown__menu {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  position: absolute;
+  top: calc(100% + .5rem);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background: #161616;
+  border: 1px solid #252525;
+  border-radius: 6px;
+  padding: .2rem 0;
+  min-width: 100%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.55);
+  z-index: 300;
+  transition: opacity .2s ease, visibility .2s ease;
 }
 
-.lang-switcher:hover .lang-btn:not(.active) {
+.lang-dropdown__menu li {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.lang-dropdown.open .lang-dropdown__menu {
+  visibility: visible;
   opacity: 1;
   pointer-events: auto;
 }
+
+/* itens do dropdown */
+.navbar .lang-dropdown__menu .lang-opt {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: "Archivo", sans-serif;
+  font-size: .85rem;
+  letter-spacing: .06em;
+  padding: .18rem .9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: color .15s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.navbar .lang-dropdown__menu .lang-opt:hover  { color: var(--color-text); }
+.navbar .lang-dropdown__menu .lang-opt.active { color: var(--color-text-muted); }
 
 /* ── Hamburger ── */
 .hamburger {
@@ -133,41 +236,51 @@ a { text-decoration: none; }
   border-bottom: 1px solid #222;
 }
 
-.mobile-menu a:hover { color: var(--color-accent); }
+.mobile-menu a:hover { color: var(--color-text); }
 
-.mobile-menu .mobile-lang {
+/* ── Mobile lang — horizontal, ícone só no wrapper ── */
+.mobile-lang {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: .6rem;
   margin-top: 1.4rem;
 }
 
-.mobile-menu .lang-btn {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transform: none !important;
-  font-size: .9rem;
-  padding: .3rem .65rem;
+.mobile-lang__globe {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
 }
+
+.mobile-lang__btn {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  font-family: "Archivo", sans-serif;
+  font-size: .85rem;
+  letter-spacing: .06em;
+  padding: .35rem .75rem;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+
+.mobile-lang__btn:hover  { color: var(--color-text); border-color: #444; }
+.mobile-lang__btn.active { color: var(--color-text); border-color: #444; font-weight: 600; }
 
 /* ── Responsivo ── */
 @media screen and (max-width: 768px) {
   .navbar {
-    position: fixed;
     padding: 1.2rem 5%;
     background: rgba(17, 17, 17, 0.72);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     z-index: 200;
   }
-
-  .navbar.scrolled {
-    padding: 1.2rem 5%;
-    background: rgba(17, 17, 17, 0.88);
-  }
-
-  .navbar ul,
-  .lang-switcher { display: none; }
-
+  .navbar.scrolled { padding: 1.2rem 5%; background: rgba(17,17,17,.88); }
+  .navbar ul, .lang-dropdown { display: none; }
   .hamburger { display: flex; }
   .mobile-menu { display: flex; }
 }

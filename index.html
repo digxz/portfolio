@@ -44,21 +44,43 @@
   <!-- ── Skip link (acessibilidade) ── -->
   <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
 
+  <!-- ── Barra de progresso ── -->
+  <div class="progress-bar" id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
   <!-- ── Navbar desktop ── -->
   <nav class="navbar" role="navigation" aria-label="Navegação principal">
-    <div class="lang-switcher" role="group" aria-label="Selecionar idioma">
-      <button class="lang-btn active" data-lang="pt-BR" aria-pressed="true">PT</button>
-      <button class="lang-btn"        data-lang="en"    aria-pressed="false">EN</button>
-      <button class="lang-btn"        data-lang="es"    aria-pressed="false">ES</button>
-    </div>
+
+    <a href="#" class="nav__logo" aria-label="Voltar ao topo">dr</a>
+
     <ul role="list">
       <li class="nav__itens"><a id="nav_about"    href="#aboutme__title"  aria-current="false">sobre mim</a></li>
       <li class="nav__itens"><a id="nav_projects" href="#projects__title" aria-current="false">projetos</a></li>
       <li class="nav__itens"><a id="nav_contact"  href="#contact__title"  aria-current="false">contato</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="navbar__right">
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-dropdown__trigger" id="lang-trigger" aria-haspopup="listbox" aria-expanded="false">
+          <svg class="lang-dropdown__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 3c-2.5 3-4 5.6-4 9s1.5 6 4 9M12 3c2.5 3 4 5.6 4 9s-1.5 6-4 9M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span id="lang-current">PT</span>
+          <svg class="lang-dropdown__chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown__menu" role="listbox" aria-label="Idiomas disponíveis">
+          <li><button class="lang-opt active" data-lang="pt-BR" role="option" aria-selected="true">PT</button></li>
+          <li><button class="lang-opt"        data-lang="en"    role="option" aria-selected="false">EN</button></li>
+          <li><button class="lang-opt"        data-lang="es"    role="option" aria-selected="false">ES</button></li>
+        </ul>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
   </nav>
 
   <!-- ── Mobile drawer ── -->
@@ -67,9 +89,13 @@
     <a id="mob_projects" href="#projects__title">projetos</a>
     <a id="mob_contact"  href="#contact__title">contato</a>
     <div class="mobile-lang" role="group" aria-label="Selecionar idioma">
-      <button class="lang-btn active" data-lang="pt-BR" aria-pressed="true">PT</button>
-      <button class="lang-btn"        data-lang="en"    aria-pressed="false">EN</button>
-      <button class="lang-btn"        data-lang="es"    aria-pressed="false">ES</button>
+      <svg class="mobile-lang__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 3c-2.5 3-4 5.6-4 9s1.5 6 4 9M12 3c2.5 3 4 5.6 4 9s-1.5 6-4 9M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <button class="mobile-lang__btn active" data-lang="pt-BR" aria-selected="true">PT</button>
+      <button class="mobile-lang__btn"        data-lang="en"    aria-selected="false">EN</button>
+      <button class="mobile-lang__btn"        data-lang="es"    aria-selected="false">ES</button>
     </div>
   </div>
 

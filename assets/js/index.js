@@ -18,6 +18,7 @@ const i18n = {
     contact_subtitle: "Tem interesse em uma conversa? Entre em contato comigo!",
     contact_location: "Brasil",
     skip_link: "Ir para o conteúdo",
+    menu_label: "Menu",
   },
   "en": {
     nav_about: "about me", nav_projects: "projects", nav_contact: "contact",
@@ -32,6 +33,7 @@ const i18n = {
     contact_subtitle: "Interested in a conversation? Get in touch with me!",
     contact_location: "Brazil",
     skip_link: "Skip to content",
+    menu_label: "Menu",
   },
   "es": {
     nav_about: "sobre mí", nav_projects: "proyectos", nav_contact: "contacto",
@@ -46,6 +48,7 @@ const i18n = {
     contact_subtitle: "¿Interesado en una conversación? ¡Ponte en contacto conmigo!",
     contact_location: "Brasil",
     skip_link: "Ir al contenido",
+    menu_label: "Menú",
   },
 };
 
@@ -54,7 +57,6 @@ function applyLang(lang) {
   const t = i18n[lang];
   if (!t) return;
 
-  // nav
   document.getElementById("nav_about").textContent    = t.nav_about;
   document.getElementById("nav_projects").textContent = t.nav_projects;
   document.getElementById("nav_contact").textContent  = t.nav_contact;
@@ -62,12 +64,10 @@ function applyLang(lang) {
   document.getElementById("mob_projects").textContent = t.nav_projects;
   document.getElementById("mob_contact").textContent  = t.nav_contact;
 
-  // hero
   document.getElementById("greeting").textContent = t.greeting;
   document.getElementById("subtitle").textContent = t.subtitle;
   document.getElementById("connect").textContent  = t.connect;
 
-  // about
   document.getElementById("aboutme__title").textContent = t.about_title;
   document.getElementById("about_p1").innerHTML =
     `${t.about_p1} <span class="emphasis">Itaú Unibanco</span>!`;
@@ -75,7 +75,6 @@ function applyLang(lang) {
     `${t.about_p2} <span class="emphasis">Data Science</span>, ${t.about_p2b} <span class="emphasis">FIAP</span>!`;
   document.getElementById("sub_about").textContent = t.sub_about;
 
-  // projects
   document.getElementById("projects__title").textContent = t.projects_title;
   document.querySelectorAll(".card__title").forEach(el => {
     el.textContent = `${t.card_project} ${String(el.dataset.cardIndex).padStart(2, "0")}`;
@@ -84,50 +83,115 @@ function applyLang(lang) {
     el.textContent = t.card_wip;
   });
 
-  // contact
   document.getElementById("contact__title").textContent    = t.contact_title;
   document.getElementById("contact__subtitle").textContent = t.contact_subtitle;
   document.getElementById("contact__location").textContent = t.contact_location;
 
-  // skip link
   const skip = document.querySelector(".skip-link");
   if (skip) skip.textContent = t.skip_link;
 
-  // html lang + botões
-  document.documentElement.lang = lang;
-  document.querySelectorAll(".lang-btn").forEach(btn => {
+  // label do trigger
+  const current = document.getElementById("lang-current");
+  if (current) current.textContent = lang === "pt-BR" ? "PT" : lang.toUpperCase();
+
+  // estado dos botões de idioma — dropdown desktop
+  document.querySelectorAll(".lang-opt").forEach(btn => {
     const active = btn.dataset.lang === lang;
     btn.classList.toggle("active", active);
-    btn.setAttribute("aria-pressed", active ? "true" : "false");
+    btn.setAttribute("aria-selected", String(active));
   });
 
-  // reordenar switcher desktop: ativo primeiro
-  const switcher = document.querySelector(".lang-switcher");
-  if (switcher) {
-    const activeBtn = switcher.querySelector(`.lang-btn[data-lang="${lang}"]`);
-    if (activeBtn) switcher.insertBefore(activeBtn, switcher.firstChild);
-  }
+  // estado dos botões de idioma — mobile
+  document.querySelectorAll(".mobile-lang__btn").forEach(btn => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-selected", String(active));
+  });
+
+  document.documentElement.lang = lang;
 }
 
-// ─── Intersection Observer — seção ativa na navbar ───────────────
+// ─── Barra de progresso ──────────────────────────────────────────
+function initProgressBar() {
+  const bar = document.getElementById("progress-bar");
+  if (!bar) return;
+
+  function update() {
+    const scrolled  = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const pct       = maxScroll > 0 ? (scrolled / maxScroll) * 100 : 0;
+    bar.style.width = pct + "%";
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+}
+
+// ─── Dropdown de idioma ──────────────────────────────────────────
+function initLangDropdown() {
+  const dropdown = document.getElementById("lang-dropdown");
+  const trigger  = document.getElementById("lang-trigger");
+  if (!dropdown || !trigger) return;
+
+  const menu = dropdown.querySelector(".lang-dropdown__menu");
+
+  function updateMenuItems(currentLang) {
+    // mostra só as opções que NÃO são o idioma atual
+    menu.querySelectorAll("li").forEach(li => {
+      const btn = li.querySelector(".lang-opt");
+      li.style.display = btn.dataset.lang === currentLang ? "none" : "";
+    });
+  }
+
+  function closeDropdown() {
+    dropdown.classList.remove("open");
+    trigger.setAttribute("aria-expanded", "false");
+  }
+
+  trigger.addEventListener("click", e => {
+    e.stopPropagation();
+    // atualizar quais itens mostrar antes de abrir
+    const activeLang = document.documentElement.lang;
+    updateMenuItems(activeLang);
+    const isOpen = dropdown.classList.toggle("open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // fechar ao clicar fora
+  document.addEventListener("click", e => {
+    if (!dropdown.contains(e.target)) closeDropdown();
+  });
+
+  // fechar com Esc
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeDropdown();
+  });
+
+  // opções do dropdown
+  dropdown.querySelectorAll(".lang-opt").forEach(btn => {
+    btn.addEventListener("click", () => {
+      applyLang(btn.dataset.lang);
+      closeDropdown();
+    });
+  });
+}
+
+// ─── Nav ativa (IntersectionObserver) ────────────────────────────
 function initActiveNav() {
   const sections = [
     { el: document.getElementById("aboutme__title"),  id: "nav_about"    },
     { el: document.getElementById("projects__title"), id: "nav_projects" },
     { el: document.getElementById("contact__title"),  id: "nav_contact"  },
   ];
-
-  const navLinks = [
-    document.getElementById("nav_about"),
-    document.getElementById("nav_projects"),
-    document.getElementById("nav_contact"),
-  ];
+  const navLinks = sections.map(s => document.getElementById(s.id));
 
   function setActive(activeId) {
     navLinks.forEach(a => {
-      const isActive = a.id === activeId;
-      a.classList.toggle("nav--active", isActive);
-      a.setAttribute("aria-current", isActive ? "page" : "false");
+      const isActive = a && a.id === activeId;
+      if (a) {
+        a.classList.toggle("nav--active", isActive);
+        a.setAttribute("aria-current", isActive ? "page" : "false");
+      }
     });
   }
 
@@ -142,7 +206,6 @@ function initActiveNav() {
 
   sections.forEach(s => { if (s.el) obs.observe(s.el); });
 
-  // limpar ativo quando volta ao topo (hero)
   const heroObs = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) setActive(null);
   }, { threshold: 0.3 });
@@ -153,14 +216,12 @@ function initActiveNav() {
 // ─── Boot ─────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
 
-  // rodapé: ano dinâmico
   document.getElementById("footer__year").textContent = new Date().getFullYear();
 
-  // idioma padrão
   applyLang("pt-BR");
 
-  // botões de idioma
-  document.querySelectorAll(".lang-btn").forEach(btn => {
+  // idioma mobile
+  document.querySelectorAll(".mobile-lang__btn").forEach(btn => {
     btn.addEventListener("click", () => {
       applyLang(btn.dataset.lang);
       closeMobileMenu();
@@ -185,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
-  // fechar menu ao clicar fora
   document.addEventListener("click", e => {
     if (mobileMenu.classList.contains("open") &&
         !mobileMenu.contains(e.target) &&
@@ -194,11 +254,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // fechar menu com Esc
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && mobileMenu.classList.contains("open")) {
-      closeMobileMenu();
-      hamburger.focus();
+    if (e.key === "Escape") {
+      if (mobileMenu.classList.contains("open")) {
+        closeMobileMenu();
+        hamburger.focus();
+      }
     }
   });
 
@@ -206,12 +267,13 @@ document.addEventListener("DOMContentLoaded", () => {
     a.addEventListener("click", closeMobileMenu);
   });
 
-  // navbar glassmorphism ao scroll
-  const navbar  = document.querySelector(".navbar");
+  // navbar glassmorphism
+  const navbar   = document.querySelector(".navbar");
   const onScroll = () => navbar.classList.toggle("scrolled", window.scrollY > 40);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // nav ativa por seção
+  initProgressBar();
+  initLangDropdown();
   initActiveNav();
 });
