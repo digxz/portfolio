@@ -54,10 +54,13 @@ a { text-decoration: none; }
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 3rem;
   font-size: 1.4rem;
   margin: 0;
   padding: 0;
+}
+
+.navbar > ul {
+  gap: 3rem;
 }
 
 .nav__itens a {
@@ -138,7 +141,8 @@ a { text-decoration: none; }
   background: #161616;
   border: 1px solid #252525;
   border-radius: 6px;
-  padding: .2rem 0;
+  gap: .65rem;
+  padding: .5rem .3rem !important;
   min-width: 100%;
   box-shadow: 0 8px 24px rgba(0,0,0,.55);
   z-index: 300;
@@ -288,17 +292,21 @@ a { text-decoration: none; }
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .navbar { padding: 2rem 5%; }
   .navbar.scrolled { padding: 1rem 5%; }
-  .navbar ul { font-size: 1.1rem; gap: 1.4rem; }
+  .navbar ul { font-size: 1.1rem; }
+  .navbar > ul { gap: 1.4rem; }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .navbar ul { font-size: 1.1rem; gap: 1.6rem; }
+  .navbar ul { font-size: 1.1rem; }
+  .navbar > ul { gap: 1.6rem; }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
-  .navbar ul { font-size: 1.2rem; gap: 2rem; }
+  .navbar ul { font-size: 1.2rem; }
+  .navbar > ul { gap: 2rem; }
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1919px) {
   .navbar ul { font-size: 1.4rem; }
+  .navbar > ul { gap: 3rem; }
 }
