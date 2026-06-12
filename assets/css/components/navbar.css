@@ -28,7 +28,7 @@ a { text-decoration: none; }
   list-style: none;
   display: flex;
   gap: 3rem;
-  font-size: 2rem;
+  font-size: 1.4rem;   /* reduzido para notebooks */
   margin: 0;
   padding: 0;
 }
@@ -38,7 +38,8 @@ a { text-decoration: none; }
   color: var(--color-text-muted);
 }
 
-.nav__itens a:hover { color: var(--color-accent); transition: 0.5s; }
+/* hover branco */
+.nav__itens a:hover { color: var(--color-text); transition: 0.5s; }
 
 /* ── Lang switcher ── */
 .lang-switcher {
@@ -159,7 +160,6 @@ a { text-decoration: none; }
     z-index: 200;
   }
 
-  /* ao scrollar no mobile, leve intensificação */
   .navbar.scrolled {
     padding: 1.2rem 5%;
     background: rgba(17, 17, 17, 0.88);
@@ -175,13 +175,17 @@ a { text-decoration: none; }
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .navbar { padding: 2rem 5%; }
   .navbar.scrolled { padding: 1rem 5%; }
-  .navbar ul { font-size: 1.3rem; gap: 1.6rem; }
+  .navbar ul { font-size: 1.1rem; gap: 1.4rem; }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .navbar ul { font-size: 1.4rem; gap: 2rem; }
+  .navbar ul { font-size: 1.1rem; gap: 1.6rem; }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1919px) {
-  .navbar ul { font-size: 1.6rem; }
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .navbar ul { font-size: 1.2rem; gap: 2rem; }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1919px) {
+  .navbar ul { font-size: 1.4rem; }
 }

@@ -39,14 +39,9 @@
   letter-spacing: .02em;
   white-space: nowrap;
   transition: border-color .25s, background-color .25s;
-  cursor: default;
 }
 
 /* clicáveis */
-a.contact__item {
-  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
-}
-
 a.contact__item:hover {
   border-color: #3a3a3a;
   background-color: #1e1e1e;
@@ -58,14 +53,22 @@ a.contact__item:hover .contact__item-text {
   opacity: 1;
 }
 
-/* ícone img (linkedin, github) — torna branco/cinza no hover */
+/* ícone img (linkedin, github) — torna branco no hover */
 a.contact__item:hover .contact__icon--img {
   filter: grayscale(1) brightness(3);
   opacity: .9;
 }
 
-/* estático (localização) */
-.contact__item--static { opacity: .55; }
+/* estático (localização) — sem pointer events, cor muted direta nos filhos */
+.contact__item--static {
+  cursor: default;
+}
+
+.contact__item--static .contact__icon,
+.contact__item--static .contact__item-text {
+  color: var(--color-text-muted);
+  opacity: .75;
+}
 
 /* ── ícones ── */
 .contact__icon {

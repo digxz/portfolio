@@ -1,10 +1,10 @@
 :root {
-  --color-accent:    #f88104;
-  --color-bg:        #111111;
-  --color-bg-card:   #151515;
-  --color-text:      #f1f1f1;
-  --color-text-muted:#797e87;
-  --color-text-body: #e0e0e0;
+  --color-accent:      #f88104;
+  --color-bg:          #111111;
+  --color-bg-card:     #151515;
+  --color-text:        #f1f1f1;
+  --color-text-muted:  #797e87;
+  --color-text-body:   #e0e0e0;
 }
 
 * {
@@ -12,7 +12,6 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--color-text);
-  cursor: url("/assets/images/cursor/default.png"), default;
 }
 
 html { scroll-behavior: smooth; }
@@ -23,8 +22,6 @@ body {
   background-repeat: repeat;
   letter-spacing: 0.5px;
 }
-
-a { cursor: url("/assets/images/cursor/handpointing.png"), pointer; }
 
 .titles {
   font-size: 3rem;
@@ -39,6 +36,21 @@ a { cursor: url("/assets/images/cursor/handpointing.png"), pointer; }
 ::-webkit-scrollbar-thumb { background-color: var(--color-accent); border-radius: 10rem; }
 
 ::selection { background-color: var(--color-accent); color: var(--color-text); }
+
+/* ── Rodapé ── */
+.site-footer {
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+  border-top: 1px solid #1e1e1e;
+  color: var(--color-text-muted);
+  font-size: .85rem;
+  letter-spacing: .04em;
+}
+
+.site-footer strong {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
 
 /* ── Responsivo ── */
 @media screen and (max-width: 480px)                          { .titles { font-size: 2rem; } }

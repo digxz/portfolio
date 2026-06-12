@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Sedan+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Sedan+SC&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/scrollreveal" defer></script>
 
@@ -74,7 +74,7 @@
     </div>
 
     <!-- ── Sobre mim ── -->
-    <p id="aboutme__title" class="titles">sobre mim</p>
+    <p id="aboutme__title" class="titles scroll">sobre mim</p>
     <section class="about scroll">
       <p id="about_p1">Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú</span>!</p>
       <p id="about_p2">Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!</p>
@@ -82,7 +82,7 @@
     </section>
 
     <!-- ── Projetos ── -->
-    <p id="projects__title" class="titles">projetos</p>
+    <p id="projects__title" class="titles scroll">projetos</p>
     <section class="projects scroll">
       <div class="project__card">
         <h2 class="card__title" data-card-index="1">Projeto 01</h2>
@@ -136,13 +136,13 @@
           <span class="contact__item-text">diegocastelliniramirez.dcr@gmail.com</span>
         </a>
 
-        <!-- LinkedIn — usa o SVG do projeto via img + filter -->
+        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/diegocastelliniramirez/" target="_blank" rel="noopener" class="contact__item" aria-label="Ver perfil no LinkedIn">
           <img src="assets/images/linkedin-logo.svg" alt="" class="contact__icon contact__icon--img">
           <span class="contact__item-text">LinkedIn</span>
         </a>
 
-        <!-- GitHub — usa o SVG do projeto via img + filter -->
+        <!-- GitHub -->
         <a href="https://github.com/digxz" target="_blank" rel="noopener" class="contact__item" aria-label="Ver perfil no GitHub">
           <img src="assets/images/github-logo.svg" alt="" class="contact__icon contact__icon--img">
           <span class="contact__item-text">GitHub</span>
@@ -161,6 +161,11 @@
     </section>
 
   </main>
+
+  <!-- ── Rodapé ── -->
+  <footer class="site-footer">
+    <span id="footer__year"></span> by <strong>Diego Ramirez</strong>
+  </footer>
 
   <script src="assets/js/index.js" defer></script>
 </body>

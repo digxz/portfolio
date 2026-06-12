@@ -16,7 +16,11 @@
   margin-bottom: 0;
 }
 
-.emphasis { color: var(--color-accent); }
+/* sem destaque em laranja — negrito no lugar */
+.emphasis {
+  color: inherit;
+  font-weight: 700;
+}
 
 /* ── responsivo ── */
 @media screen and (max-width: 480px) {

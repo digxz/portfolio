@@ -5,11 +5,14 @@
   justify-content: center;
 }
 
+/* hero ocupa a tela toda — sobre mim começa apenas ao rolar */
 .apresentation__text {
+  min-height: 100vh;
   text-align: left;
-  margin: 12% 10%;
+  margin: 0 10%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.2rem;
 }
 
@@ -57,7 +60,6 @@
   opacity: .5;
   filter: grayscale(1) brightness(2);
   transition: opacity .25s ease, filter .25s ease, transform .25s ease;
-  cursor: url("/assets/images/cursor/handpointing.png"), pointer;
 }
 
 .connect__icons a:hover img {
@@ -70,32 +72,32 @@
 @media screen and (max-width: 480px) {
   .apresentation__text {
     font-size: 2rem;
-    margin: 11rem 3rem 0;
+    margin: 0 3rem;
     padding: 0 0 3rem;
     gap: .8rem;
   }
-  .apresentation__subtitle  { font-size: 1rem; }
-  .apresentation__social    { gap: 1.2rem; padding-top: 1.4rem; margin-top: .6rem; }
+  .apresentation__subtitle     { font-size: 1rem; }
+  .apresentation__social       { gap: 1.2rem; padding-top: 1.4rem; margin-top: .6rem; }
   .apresentation__social-label { font-size: .85rem; }
-  .connect__icons a img     { height: 1.6rem; }
+  .connect__icons a img        { height: 1.6rem; }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .apresentation__text {
     font-size: 2.4rem;
-    margin: 14rem 3rem 0;
+    margin: 0 3rem;
     padding: 0 0 3rem;
     gap: .9rem;
   }
-  .apresentation__subtitle  { font-size: 1.1rem; }
+  .apresentation__subtitle     { font-size: 1.1rem; }
   .apresentation__social-label { font-size: .9rem; }
-  .connect__icons a img     { height: 1.8rem; }
+  .connect__icons a img        { height: 1.8rem; }
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .apresentation__text {
     font-size: 2.6rem;
-    margin: 15rem 3rem 4rem;
+    margin: 0 3rem;
   }
   .apresentation__subtitle  { font-size: 1.2rem; }
   .connect__icons a img     { height: 1.9rem; }
@@ -104,7 +106,7 @@
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .apresentation__text {
     font-size: 3.3rem;
-    margin: 15rem 4rem 0;
+    margin: 0 4rem;
   }
   .apresentation__subtitle  { font-size: 1.4rem; }
 }
@@ -112,14 +114,14 @@
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
   .apresentation__text {
     font-size: 3.5rem;
-    margin: 20rem 7rem 13rem;
+    margin: 0 7rem;
   }
-  .apresentation__subtitle  { font-size: 1.5rem; }
+  .apresentation__subtitle     { font-size: 1.5rem; }
   .apresentation__social-label { font-size: 1.1rem; }
 }
 
 @media screen and (min-width: 1920px) {
-  .apresentation__subtitle  { font-size: 1.8rem; }
+  .apresentation__subtitle     { font-size: 1.8rem; }
   .apresentation__social-label { font-size: 1.3rem; }
-  .connect__icons a img     { height: 2.4rem; }
+  .connect__icons a img        { height: 2.4rem; }
 }
