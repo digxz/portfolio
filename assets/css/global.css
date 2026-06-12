@@ -58,3 +58,62 @@ body {
 @media screen and (min-width: 769px)  and (max-width: 991px)  { .titles { font-size: 2rem; } }
 @media screen and (min-width: 992px)  and (max-width: 1199px) { .titles { font-size: 2.5rem; } }
 @media screen and (min-width: 1200px) and (max-width: 1919px) { .titles { font-size: 2.8rem; } }
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-accent);
+  color: #000;
+  font-weight: 600;
+  padding: .5rem 1.2rem;
+  border-radius: 0 0 6px 6px;
+  z-index: 9999;
+  transition: top .2s;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Animação hero ── */
+.hero__inner { display: contents; }
+
+.hero__line {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroFadeUp .7s cubic-bezier(.22,.61,.36,1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes heroFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Nav ativa (IntersectionObserver) ── */
+.nav__itens a.nav--active { color: var(--color-text); }
+
+/* ── @media print ── */
+@media print {
+  .navbar, .mobile-menu, .hamburger, .skip-link,
+  .site-footer, .lang-switcher { display: none !important; }
+
+  body {
+    background: #fff;
+    color: #111;
+    font-size: 12pt;
+  }
+
+  .titles { visibility: visible; font-size: 18pt; color: #111; }
+  .scroll  { visibility: visible; }
+
+  .about p, .about .sub-about { color: #333; font-size: 11pt; line-height: 1.6; }
+  .emphasis { font-weight: 700; }
+
+  .contact__items { flex-direction: column; align-items: flex-start; }
+  .contact__item  { border: none; padding: .3rem 0; background: transparent; }
+  .contact__item-text { color: #111; }
+  .contact__icon--img { filter: none; opacity: 1; }
+
+  a[href]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  a[aria-label*="nova aba"]::after { content: ""; }
+}

@@ -125,3 +125,9 @@
   .apresentation__social-label { font-size: 1.3rem; }
   .connect__icons a img        { height: 2.4rem; }
 }
+
+/* ── hero wrapper acessível ── */
+.hero {
+  display: flex;
+  align-items: center;
+}

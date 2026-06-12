@@ -4,153 +4,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Diego Ramirez — Estagiário de Análise de Dados no Itaú, estudante de Data Science na FIAP.">
-  <meta property="og:title" content="Diego Ramirez — Data Science Portfolio">
-  <meta property="og:description" content="Estagiário de Análise de Dados no Itaú, estudante de Data Science na FIAP.">
-  <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="assets/css/extends.css" />
+  <!-- ── SEO ── -->
+  <title>Diego Ramirez — Data Science Portfolio</title>
+  <meta name="description"        content="Portfólio de Diego Ramirez — Estagiário de Análise de Dados no Itaú Unibanco, estudante de Data Science na FIAP. São Paulo, Brasil.">
+  <meta name="keywords"           content="Diego Ramirez, Data Science, Data Engineer, portfolio, FIAP, Itaú, Python, SQL">
+  <meta name="author"             content="Diego Ramirez">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title"       content="Diego Ramirez — Data Science Portfolio">
+  <meta property="og:description" content="Estagiário de Análise de Dados no Itaú Unibanco, estudante de Data Science na FIAP. São Paulo, Brasil.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://digxz.github.io/">
+  <meta property="og:locale"      content="pt_BR">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Diego Ramirez — Data Science Portfolio">
+  <meta name="twitter:description" content="Estagiário de Análise de Dados no Itaú Unibanco, estudante de Data Science na FIAP.">
+
+  <!-- ── Favicon ── -->
   <link rel="icon" href="assets/images/icon.svg">
 
+  <!-- ── Fonte: preconnect + preload peso crítico ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"    href="https://fonts.gstatic.com/s/archivo/v19/k3kQo8UDI-1M0wlSdSnhc5cC.woff2" as="font" type="font/woff2" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Sedan+SC&display=swap" rel="stylesheet">
 
-  <script src="https://unpkg.com/scrollreveal" defer></script>
+  <!-- ── CSS ── -->
+  <link rel="stylesheet" href="assets/css/extends.css" />
 
-  <title>digxz</title>
+  <!-- ── ScrollReveal ── -->
+  <script src="https://unpkg.com/scrollreveal" defer></script>
 </head>
 
 <body>
 
+  <!-- ── Skip link (acessibilidade) ── -->
+  <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
+
   <!-- ── Navbar desktop ── -->
-  <nav class="navbar">
-    <div class="lang-switcher">
-      <button class="lang-btn active" data-lang="pt-BR">PT</button>
-      <button class="lang-btn"        data-lang="en">EN</button>
-      <button class="lang-btn"        data-lang="es">ES</button>
+  <nav class="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="lang-switcher" role="group" aria-label="Selecionar idioma">
+      <button class="lang-btn active" data-lang="pt-BR" aria-pressed="true">PT</button>
+      <button class="lang-btn"        data-lang="en"    aria-pressed="false">EN</button>
+      <button class="lang-btn"        data-lang="es"    aria-pressed="false">ES</button>
     </div>
-    <ul>
-      <li class="nav__itens"><a id="nav_about"    href="#aboutme__title">sobre mim</a></li>
-      <li class="nav__itens"><a id="nav_projects" href="#projects__title">projetos</a></li>
-      <li class="nav__itens"><a id="nav_contact"  href="#contact__title">contato</a></li>
+    <ul role="list">
+      <li class="nav__itens"><a id="nav_about"    href="#aboutme__title"  aria-current="false">sobre mim</a></li>
+      <li class="nav__itens"><a id="nav_projects" href="#projects__title" aria-current="false">projetos</a></li>
+      <li class="nav__itens"><a id="nav_contact"  href="#contact__title"  aria-current="false">contato</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- ── Mobile drawer ── -->
-  <div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
     <a id="mob_about"    href="#aboutme__title">sobre mim</a>
     <a id="mob_projects" href="#projects__title">projetos</a>
     <a id="mob_contact"  href="#contact__title">contato</a>
-    <div class="mobile-lang">
-      <button class="lang-btn active" data-lang="pt-BR">PT</button>
-      <button class="lang-btn"        data-lang="en">EN</button>
-      <button class="lang-btn"        data-lang="es">ES</button>
+    <div class="mobile-lang" role="group" aria-label="Selecionar idioma">
+      <button class="lang-btn active" data-lang="pt-BR" aria-pressed="true">PT</button>
+      <button class="lang-btn"        data-lang="en"    aria-pressed="false">EN</button>
+      <button class="lang-btn"        data-lang="es"    aria-pressed="false">ES</button>
     </div>
   </div>
 
-  <main class="main__content">
+  <main id="main-content" class="main__content">
 
     <!-- ── Hero ── -->
-    <div class="apresentation__text">
-      <div class="apresentation__greeting">
-        <span id="greeting">Olá! Eu sou o</span><span class="apresentation__emphasis"> Diego</span>!
-      </div>
-      <div id="subtitle" class="apresentation__subtitle">Engenheiro de Dados</div>
-      <div class="apresentation__social">
-        <span id="connect" class="apresentation__social-label">Conecte-se comigo</span>
-        <div class="connect__icons">
-          <a href="https://www.linkedin.com/in/diegocastelliniramirez/" aria-label="Ver perfil no LinkedIn">
-            <img src="assets/images/linkedin-logo.svg" alt="LinkedIn">
-          </a>
-          <a href="https://github.com/digxz" aria-label="Ver perfil no GitHub">
-            <img src="assets/images/github-logo.svg" alt="GitHub">
-          </a>
+    <section class="apresentation__text hero" aria-label="Apresentação">
+      <div class="hero__inner">
+        <div class="apresentation__greeting hero__line" style="--delay:.05s">
+          <span id="greeting">Olá! Eu sou o</span><span class="apresentation__emphasis"> Diego</span>!
+        </div>
+        <div id="subtitle" class="apresentation__subtitle hero__line" style="--delay:.2s">Engenheiro de Dados</div>
+        <div class="apresentation__social hero__line" style="--delay:.35s">
+          <span id="connect" class="apresentation__social-label">Conecte-se comigo</span>
+          <div class="connect__icons">
+            <a href="https://www.linkedin.com/in/diegocastelliniramirez/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil no LinkedIn">
+              <img src="assets/images/linkedin-logo.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://github.com/digxz" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil no GitHub">
+              <img src="assets/images/github-logo.svg" alt="GitHub" width="32" height="32">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- ── Sobre mim ── -->
     <p id="aboutme__title" class="titles scroll">sobre mim</p>
-    <section class="about scroll">
-      <p id="about_p1">Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú</span>!</p>
+    <section class="about scroll" aria-labelledby="aboutme__title">
+      <p id="about_p1">Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no <span class="emphasis">Itaú Unibanco</span>!</p>
       <p id="about_p2">Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!</p>
       <p id="sub_about" class="sub-about">Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha), o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.</p>
     </section>
 
     <!-- ── Projetos ── -->
     <p id="projects__title" class="titles scroll">projetos</p>
-    <section class="projects scroll">
-      <div class="project__card">
-        <h2 class="card__title" data-card-index="1">Projeto 01</h2>
-        <p class="card__description">Projeto em desenvolvimento...</p>
-      </div>
-      <div class="project__card">
-        <h2 class="card__title" data-card-index="2">Projeto 02</h2>
-        <p class="card__description">Projeto em desenvolvimento...</p>
-      </div>
-      <div class="project__card">
-        <h2 class="card__title" data-card-index="3">Projeto 03</h2>
-        <p class="card__description">Projeto em desenvolvimento...</p>
-      </div>
-      <div class="project__card">
-        <h2 class="card__title" data-card-index="4">Projeto 04</h2>
-        <p class="card__description">Projeto em desenvolvimento...</p>
-      </div>
-      <div class="project__card">
-        <h2 class="card__title" data-card-index="5">Projeto 05</h2>
-        <p class="card__description">Projeto em desenvolvimento...</p>
-      </div>
-      <div class="project__card">
-        <h2 class="card__title" data-card-index="6">Projeto 06</h2>
-        <p class="card__description">Projeto em desenvolvimento...</p>
-      </div>
+    <section class="projects scroll" aria-labelledby="projects__title">
+      <div class="project__card"><h2 class="card__title" data-card-index="1">Projeto 01</h2><p class="card__description">Projeto em desenvolvimento...</p></div>
+      <div class="project__card"><h2 class="card__title" data-card-index="2">Projeto 02</h2><p class="card__description">Projeto em desenvolvimento...</p></div>
+      <div class="project__card"><h2 class="card__title" data-card-index="3">Projeto 03</h2><p class="card__description">Projeto em desenvolvimento...</p></div>
+      <div class="project__card"><h2 class="card__title" data-card-index="4">Projeto 04</h2><p class="card__description">Projeto em desenvolvimento...</p></div>
+      <div class="project__card"><h2 class="card__title" data-card-index="5">Projeto 05</h2><p class="card__description">Projeto em desenvolvimento...</p></div>
+      <div class="project__card"><h2 class="card__title" data-card-index="6">Projeto 06</h2><p class="card__description">Projeto em desenvolvimento...</p></div>
     </section>
-
-    <!-- skills — serão reativadas após a conclusão dos projetos
-    <p id="skills__title" class="titles">skills</p>
-    <section class="skills scroll">
-      <div class="skills__cards"><img src="assets/images/technologies/html.svg" alt="HTML"></div>
-      <div class="skills__cards"><img src="assets/images/technologies/css.svg" alt="CSS"></div>
-      <div class="skills__cards"><img src="assets/images/technologies/javascript.svg" alt="JavaScript"></div>
-      <div class="skills__cards"><img src="assets/images/technologies/git.svg" alt="Git"></div>
-    </section>
-    -->
 
     <!-- ── Contato ── -->
-    <section class="contact__section scroll">
+    <section class="contact__section scroll" aria-labelledby="contact__title">
       <p id="contact__title" class="titles">Contato</p>
       <p id="contact__subtitle" class="contact__subtitle">Tem interesse em uma conversa? Entre em contato comigo!</p>
-
       <div class="contact__items">
 
-        <!-- Email -->
-        <a href="mailto:diegocastelliniramirez.dcr@gmail.com" class="contact__item" aria-label="Enviar email">
-          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="mailto:diegocastelliniramirez.dcr@gmail.com" class="contact__item" aria-label="Enviar email para diegocastelliniramirez.dcr@gmail.com">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
             <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
           <span class="contact__item-text">diegocastelliniramirez.dcr@gmail.com</span>
         </a>
 
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/diegocastelliniramirez/" target="_blank" rel="noopener" class="contact__item" aria-label="Ver perfil no LinkedIn">
-          <img src="assets/images/linkedin-logo.svg" alt="" class="contact__icon contact__icon--img">
+        <a href="https://www.linkedin.com/in/diegocastelliniramirez/" target="_blank" rel="noopener noreferrer" class="contact__item" aria-label="Abrir perfil do LinkedIn (abre em nova aba)">
+          <img src="assets/images/linkedin-logo.svg" alt="" class="contact__icon contact__icon--img" aria-hidden="true" width="22" height="22" loading="lazy">
           <span class="contact__item-text">LinkedIn</span>
         </a>
 
-        <!-- GitHub -->
-        <a href="https://github.com/digxz" target="_blank" rel="noopener" class="contact__item" aria-label="Ver perfil no GitHub">
-          <img src="assets/images/github-logo.svg" alt="" class="contact__icon contact__icon--img">
+        <a href="https://github.com/digxz" target="_blank" rel="noopener noreferrer" class="contact__item" aria-label="Abrir perfil do GitHub (abre em nova aba)">
+          <img src="assets/images/github-logo.svg" alt="" class="contact__icon contact__icon--img" aria-hidden="true" width="22" height="22" loading="lazy">
           <span class="contact__item-text">GitHub</span>
         </a>
 
-        <!-- Localização -->
-        <div class="contact__item contact__item--static">
-          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="contact__item contact__item--static" role="note" aria-label="Localização: Brasil">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
             <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
           </svg>
@@ -163,7 +153,7 @@
   </main>
 
   <!-- ── Rodapé ── -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <span id="footer__year"></span> by <strong>Diego Ramirez</strong>
   </footer>
 
