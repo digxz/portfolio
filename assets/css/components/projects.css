@@ -21,19 +21,23 @@
   background-color: #1c1c1c;
   border: solid 1px var(--color-accent);
   border-radius: 8px;
-  transition: background-color .25s ease;
+  transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 
 .project__card:hover {
   background-color: #252525;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
 }
 
 .card__title {
+  font-family: "Archivo", sans-serif;
   font-size: 1.4rem;
   margin: 1.6rem 0 0 2rem;
 }
 
 .card__description {
+  font-family: "Archivo", sans-serif;
   color: #9ea3af;
   font-size: 1.2rem;
   margin: 1rem 1rem 0 2rem;

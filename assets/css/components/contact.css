@@ -10,6 +10,7 @@
 }
 
 .contact__subtitle {
+  font-family: "Archivo", sans-serif;
   text-align: center;
   font-size: 1.3rem;
   color: var(--color-text-muted);
@@ -35,16 +36,18 @@
   border: 1px solid #252525;
   border-radius: 8px;
   background-color: #161616;
+  font-family: "Archivo", sans-serif;
   font-size: 1.1rem;
   letter-spacing: .02em;
   white-space: nowrap;
-  transition: border-color .25s, background-color .25s;
+  transition: border-color .25s, background-color .25s, transform .25s;
 }
 
 /* clicáveis */
 a.contact__item:hover {
   border-color: #3a3a3a;
   background-color: #1e1e1e;
+  transform: translateY(-2px);
 }
 
 a.contact__item:hover .contact__icon,

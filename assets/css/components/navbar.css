@@ -66,6 +66,7 @@ a { text-decoration: none; }
 .nav__itens a {
   position: relative;
   color: var(--color-text-muted);
+  font-family: "Archivo", sans-serif;
   transition: color .3s;
 }
 
@@ -226,13 +227,18 @@ a { text-decoration: none; }
   padding: 5.5rem 2rem 2rem;
   z-index: 150;
   transform: translateY(-110%);
-  transition: transform .35s ease;
+  opacity: 0;
+  transition: transform .4s cubic-bezier(.22,.61,.36,1), opacity .4s ease;
   box-shadow: 0 4px 20px rgba(0,0,0,.5);
 }
 
-.mobile-menu.open { transform: translateY(0); }
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .mobile-menu a {
+  font-family: "Archivo", sans-serif;
   font-size: 1.6rem;
   color: var(--color-text-muted);
   padding: .9rem 0;
