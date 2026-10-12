@@ -7,9 +7,9 @@ revelar.reveal(".titles",  { duration: 1500 });
 const i18n = {
   "pt-BR": {
     nav_about: "sobre mim", nav_projects: "projetos", nav_contact: "contato",
-    greeting: "Olá! Eu sou o", subtitle: "Engenheiro de Dados",
+    greeting: "Olá! Eu sou o", subtitle: "Analista de Dados",
     about_title: "sobre mim",
-    about_p1:  "Meu nome é Diego Ramirez, e eu sou um Estagiário de Análise de Dados no",
+    about_p1:  "Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no",
     about_p2:  "Atualmente estou cursando o Ensino Superior em", about_p2b: "na",
     sub_about: "Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha), o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.",
     connect: "Conecte-se comigo", projects_title: "projetos",
@@ -22,9 +22,9 @@ const i18n = {
   },
   "en": {
     nav_about: "about me", nav_projects: "projects", nav_contact: "contact",
-    greeting: "Hi! I'm", subtitle: "Data Engineer",
+    greeting: "Hi! I'm", subtitle: "Data Analyst",
     about_title: "about me",
-    about_p1:  "My name is Diego Ramirez, and I'm a Data Analysis Intern at",
+    about_p1:  "My name is Diego Ramirez, and I'm a Junior Data Analyst at",
     about_p2:  "I'm currently pursuing a degree in", about_p2b: "at",
     sub_about: "I started my career studying Systems Development (ETEC Professor Camargo Aranha), which introduced me to the world of technology and everything it can offer. During this course I had my first formal opportunity in the job market, as an IT Assistant.",
     connect: "Connect with me", projects_title: "projects",
@@ -37,9 +37,9 @@ const i18n = {
   },
   "es": {
     nav_about: "sobre mí", nav_projects: "proyectos", nav_contact: "contacto",
-    greeting: "¡Hola! Soy", subtitle: "Ingeniero de Datos",
+    greeting: "¡Hola! Soy", subtitle: "Analista de Datos",
     about_title: "sobre mí",
-    about_p1:  "Mi nombre es Diego Ramirez, y soy un Pasante de Análisis de Datos en",
+    about_p1:  "Mi nombre es Diego Ramirez, y soy Analista de Datos Junior en",
     about_p2:  "Actualmente curso la educación superior en", about_p2b: "en",
     sub_about: "Comencé mi carrera estudiando Desarrollo de Sistemas (ETEC Professor Camargo Aranha), lo que me permitió conocer el mundo de la tecnología y todo lo que puede ofrecer. Durante ese curso tuve mi primera oportunidad formal en el mercado laboral, como Asistente de TI.",
     connect: "Conéctate conmigo", projects_title: "proyectos",
