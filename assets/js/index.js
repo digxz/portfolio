@@ -11,7 +11,6 @@ const i18n = {
     about_title: "sobre mim",
     about_p1:  "Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no",
     about_p2:  "Atualmente estou cursando o Ensino Superior em", about_p2b: "na",
-    sub_about: "Iniciei minha carreira cursando o Ensino Técnico em Desenvolvimento de Sistemas (ETEC Professor Camargo Aranha), o qual me permitiu conhecer o mundo da tecnologia, e tudo aquilo que ela pode proporcionar. Durante esse curso tive minha primeira oportunidade formal no mercado de trabalho, como Auxiliar de TI.",
     connect: "Conecte-se comigo", projects_title: "projetos",
     card_project: "Projeto", card_wip: "Projeto em desenvolvimento...",
     contact_title: "contato",
@@ -26,7 +25,6 @@ const i18n = {
     about_title: "about me",
     about_p1:  "My name is Diego Ramirez, and I'm a Junior Data Analyst at",
     about_p2:  "I'm currently pursuing a degree in", about_p2b: "at",
-    sub_about: "I started my career studying Systems Development (ETEC Professor Camargo Aranha), which introduced me to the world of technology and everything it can offer. During this course I had my first formal opportunity in the job market, as an IT Assistant.",
     connect: "Connect with me", projects_title: "projects",
     card_project: "Project", card_wip: "Project under development...",
     contact_title: "contact",
@@ -41,7 +39,6 @@ const i18n = {
     about_title: "sobre mí",
     about_p1:  "Mi nombre es Diego Ramirez, y soy Analista de Datos Junior en",
     about_p2:  "Actualmente curso la educación superior en", about_p2b: "en",
-    sub_about: "Comencé mi carrera estudiando Desarrollo de Sistemas (ETEC Professor Camargo Aranha), lo que me permitió conocer el mundo de la tecnología y todo lo que puede ofrecer. Durante ese curso tuve mi primera oportunidad formal en el mercado laboral, como Asistente de TI.",
     connect: "Conéctate conmigo", projects_title: "proyectos",
     card_project: "Proyecto", card_wip: "Proyecto en desarrollo...",
     contact_title: "contacto",
@@ -73,7 +70,6 @@ function applyLang(lang) {
     `${t.about_p1} <span class="emphasis">Itaú Unibanco</span>!`;
   document.getElementById("about_p2").innerHTML =
     `${t.about_p2} <span class="emphasis">Data Science</span>, ${t.about_p2b} <span class="emphasis">FIAP</span>!`;
-  document.getElementById("sub_about").textContent = t.sub_about;
 
   document.getElementById("projects__title").textContent = t.projects_title;
   document.querySelectorAll(".card__title").forEach(el => {
