@@ -7,7 +7,7 @@ revelar.reveal(".titles",  { duration: 1500 });
 const i18n = {
   "pt-BR": {
     nav_about: "sobre mim", nav_projects: "projetos", nav_contact: "contato",
-    greeting: "Olá! Eu sou o", subtitle: "Analista de Dados",
+    greeting: "Olá! Eu sou o", subtitle: "Analista de Dados Júnior",
     about_title: "sobre mim",
     about_p1:  "Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no",
     about_p2:  "Atualmente estou cursando o Ensino Superior em", about_p2b: "na",
@@ -21,7 +21,7 @@ const i18n = {
   },
   "en": {
     nav_about: "about me", nav_projects: "projects", nav_contact: "contact",
-    greeting: "Hi! I'm", subtitle: "Data Analyst",
+    greeting: "Hi! I'm", subtitle: "Junior Data Analyst",
     about_title: "about me",
     about_p1:  "My name is Diego Ramirez, and I'm a Junior Data Analyst at",
     about_p2:  "I'm currently pursuing a degree in", about_p2b: "at",
@@ -35,7 +35,7 @@ const i18n = {
   },
   "es": {
     nav_about: "sobre mí", nav_projects: "proyectos", nav_contact: "contacto",
-    greeting: "¡Hola! Soy", subtitle: "Analista de Datos",
+    greeting: "¡Hola! Soy", subtitle: "Analista de Datos Junior",
     about_title: "sobre mí",
     about_p1:  "Mi nombre es Diego Ramirez, y soy Analista de Datos Junior en",
     about_p2:  "Actualmente curso la educación superior en", about_p2b: "en",
