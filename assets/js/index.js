@@ -9,34 +9,50 @@ const i18n = {
     nav_about: "sobre", nav_experience: "experiência", nav_projects: "projetos", nav_contact: "contato",
     greeting: "Olá! Eu sou o", subtitle: "Analista de Dados Júnior",
     about_title: "sobre",
-    about_p1:  "Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no",
-    about_p2:  "Atualmente estou cursando o Ensino Superior em", about_p2b: "na",
+    about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
+    about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
     experience_title: "experiência",
     experience_items: [
       {
-        period: "2024 — presente",
-        role: "Lorem ipsum dolor sit amet",
-        company: "Lorem Ipsum Analytics",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+        company: "Itaú Unibanco",
+        roles: [
+          {
+            period: "out/2026 — presente",
+            role: "Analista de Dados Jr.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+          },
+          {
+            period: "jul/2025 — out/2026",
+            role: "Estagiário de Análise de Dados",
+            description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+          },
+        ],
       },
       {
-        period: "2022 — 2024",
-        role: "Consectetur adipiscing elit",
-        company: "Dolor Sit Amet Ltda.",
-        description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+        company: "Nestlé",
+        roles: [
+          {
+            period: "ago/2024 — jul/2025",
+            role: "Estagiário em Sistemas e Automação",
+            description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+          },
+        ],
       },
       {
-        period: "2020 — 2022",
-        role: "Sed do eiusmod tempor",
-        company: "Incididunt Lab",
-        description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+        company: "Escola Pro-Tec",
+        roles: [
+          {
+            period: "mai/2022 — ago/2024",
+            role: "Assistente de TI",
+            description: "Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.",
+          },
+        ],
       },
     ],
     connect: "Conecte-se comigo", projects_title: "projetos",
     card_project: "Projeto", card_wip: "Projeto em desenvolvimento...",
     contact_title: "contato",
     contact_subtitle: "Tem interesse em uma conversa? Entre em contato comigo!",
-    contact_location: "Brasil",
     skip_link: "Ir para o conteúdo",
     menu_label: "Menu",
   },
@@ -44,34 +60,50 @@ const i18n = {
     nav_about: "about", nav_experience: "experience", nav_projects: "projects", nav_contact: "contact",
     greeting: "Hi! I'm", subtitle: "Junior Data Analyst",
     about_title: "about",
-    about_p1:  "My name is Diego Ramirez, and I'm a Junior Data Analyst at",
-    about_p2:  "I'm currently pursuing a degree in", about_p2b: "at",
+    about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
+    about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
     experience_title: "experience",
     experience_items: [
       {
-        period: "2024 — present",
-        role: "Lorem ipsum dolor sit amet",
-        company: "Lorem Ipsum Analytics",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+        company: "Itaú Unibanco",
+        roles: [
+          {
+            period: "Oct 2026 — present",
+            role: "Junior Data Analyst",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+          },
+          {
+            period: "Jul 2025 — Oct 2026",
+            role: "Data Analysis Intern",
+            description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+          },
+        ],
       },
       {
-        period: "2022 — 2024",
-        role: "Consectetur adipiscing elit",
-        company: "Dolor Sit Amet Ltd.",
-        description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+        company: "Nestlé",
+        roles: [
+          {
+            period: "Aug 2024 — Jul 2025",
+            role: "Systems and Automation Intern",
+            description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+          },
+        ],
       },
       {
-        period: "2020 — 2022",
-        role: "Sed do eiusmod tempor",
-        company: "Incididunt Lab",
-        description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+        company: "Escola Pro-Tec",
+        roles: [
+          {
+            period: "May 2022 — Aug 2024",
+            role: "IT Assistant",
+            description: "Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.",
+          },
+        ],
       },
     ],
     connect: "Connect with me", projects_title: "projects",
     card_project: "Project", card_wip: "Project under development...",
     contact_title: "contact",
     contact_subtitle: "Interested in a conversation? Get in touch with me!",
-    contact_location: "Brazil",
     skip_link: "Skip to content",
     menu_label: "Menu",
   },
@@ -79,34 +111,50 @@ const i18n = {
     nav_about: "sobre", nav_experience: "experiencia", nav_projects: "proyectos", nav_contact: "contacto",
     greeting: "¡Hola! Soy", subtitle: "Analista de Datos Junior",
     about_title: "sobre",
-    about_p1:  "Mi nombre es Diego Ramirez, y soy Analista de Datos Junior en",
-    about_p2:  "Actualmente curso la educación superior en", about_p2b: "en",
+    about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
+    about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
     experience_title: "experiencia",
     experience_items: [
       {
-        period: "2024 — actualidad",
-        role: "Lorem ipsum dolor sit amet",
-        company: "Lorem Ipsum Analytics",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+        company: "Itaú Unibanco",
+        roles: [
+          {
+            period: "oct/2026 — actualidad",
+            role: "Analista de Datos Jr.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+          },
+          {
+            period: "jul/2025 — oct/2026",
+            role: "Pasante en Análisis de Datos",
+            description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+          },
+        ],
       },
       {
-        period: "2022 — 2024",
-        role: "Consectetur adipiscing elit",
-        company: "Dolor Sit Amet Ltda.",
-        description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+        company: "Nestlé",
+        roles: [
+          {
+            period: "ago/2024 — jul/2025",
+            role: "Pasante en Sistemas y Automatización",
+            description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+          },
+        ],
       },
       {
-        period: "2020 — 2022",
-        role: "Sed do eiusmod tempor",
-        company: "Incididunt Lab",
-        description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+        company: "Escola Pro-Tec",
+        roles: [
+          {
+            period: "may/2022 — ago/2024",
+            role: "Asistente de TI",
+            description: "Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.",
+          },
+        ],
       },
     ],
     connect: "Conéctate conmigo", projects_title: "proyectos",
     card_project: "Proyecto", card_wip: "Proyecto en desarrollo...",
     contact_title: "contacto",
     contact_subtitle: "¿Interesado en una conversación? ¡Ponte en contacto conmigo!",
-    contact_location: "Brasil",
     skip_link: "Ir al contenido",
     menu_label: "Menú",
   },
@@ -131,19 +179,25 @@ function applyLang(lang) {
   document.getElementById("connect").textContent  = t.connect;
 
   document.getElementById("aboutme__title").textContent = t.about_title;
-  document.getElementById("about_p1").innerHTML =
-    `${t.about_p1} <span class="emphasis">Itaú Unibanco</span>!`;
-  document.getElementById("about_p2").innerHTML =
-    `${t.about_p2} <span class="emphasis">Data Science</span>, ${t.about_p2b} <span class="emphasis">FIAP</span>!`;
+  document.getElementById("about_p1").textContent = t.about_p1;
+  document.getElementById("about_p2").textContent = t.about_p2;
 
   document.getElementById("experience__title").textContent = t.experience_title;
   document.querySelectorAll(".timeline__item").forEach((item, index) => {
     const data = t.experience_items[index];
     if (!data) return;
-    item.querySelector(".timeline__period").textContent      = data.period;
-    item.querySelector(".timeline__role").textContent        = data.role;
-    item.querySelector(".timeline__company").textContent     = data.company;
-    item.querySelector(".timeline__description").textContent = data.description;
+
+    item.querySelectorAll(".timeline__role-item").forEach((roleItem, roleIndex) => {
+      const roleData = data.roles[roleIndex];
+      if (!roleData) return;
+
+      const company = roleItem.querySelector(".timeline__company");
+      if (company) company.textContent = data.company;
+
+      roleItem.querySelector(".timeline__period").textContent      = roleData.period;
+      roleItem.querySelector(".timeline__role-title").textContent  = roleData.role;
+      roleItem.querySelector(".timeline__description").textContent = roleData.description;
+    });
   });
 
   document.getElementById("projects__title").textContent = t.projects_title;
@@ -156,7 +210,6 @@ function applyLang(lang) {
 
   document.getElementById("contact__title").textContent    = t.contact_title;
   document.getElementById("contact__subtitle").textContent = t.contact_subtitle;
-  document.getElementById("contact__location").textContent = t.contact_location;
 
   const skip = document.querySelector(".skip-link");
   if (skip) skip.textContent = t.skip_link;
@@ -285,6 +338,51 @@ function initActiveNav() {
   if (hero) heroObs.observe(hero);
 }
 
+// ─── Linha do tempo: brilho acompanha a experiência em foco ──────
+function initTimelineGlow() {
+  const timeline = document.querySelector(".timeline");
+  if (!timeline) return;
+
+  const items = [...timeline.querySelectorAll(".timeline__item")];
+
+  const setGlow = item => {
+    if (!item) {
+      timeline.classList.remove("is-glowing");
+      timeline.style.setProperty("--glow-height", "0px");
+      return;
+    }
+
+    const marker = item.querySelector(".timeline__marker");
+    if (!marker) return;
+
+    const timelineRect = timeline.getBoundingClientRect();
+    const markerRect   = marker.getBoundingClientRect();
+    const markerCenter = markerRect.top - timelineRect.top + markerRect.height / 2;
+    const bottomInset  = parseFloat(getComputedStyle(timeline, "::after").bottom) || 0;
+    const height       = Math.max(0, timelineRect.height - bottomInset - markerCenter);
+
+    timeline.style.setProperty("--glow-height", `${height}px`);
+    timeline.classList.add("is-glowing");
+  };
+
+  items.forEach(item => {
+    item.addEventListener("pointerenter", () => setGlow(item));
+    item.addEventListener("focusin",      () => setGlow(item));
+  });
+
+  timeline.addEventListener("pointerleave", () => setGlow(null));
+  timeline.addEventListener("focusout", () => {
+    if (!timeline.contains(document.activeElement)) setGlow(null);
+  });
+
+  const refresh = () => {
+    setGlow(timeline.querySelector(".timeline__item:hover, .timeline__item:focus-within"));
+  };
+
+  window.addEventListener("resize", refresh, { passive: true });
+  if ("ResizeObserver" in window) new ResizeObserver(refresh).observe(timeline);
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -348,4 +446,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initProgressBar();
   initLangDropdown();
   initActiveNav();
+  initTimelineGlow();
 });

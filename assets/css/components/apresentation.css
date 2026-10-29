@@ -1,4 +1,7 @@
 .main__content {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
   font-size: 4rem;
   font-family: "Archivo", sans-serif;
   display: flex;
@@ -62,13 +65,12 @@
   height: 2rem;
   opacity: .5;
   filter: grayscale(1) brightness(2);
-  transition: opacity .25s ease, filter .25s ease, transform .25s ease;
+  transition: opacity .25s ease, filter .25s ease;
 }
 
 .connect__icons a:hover img {
   opacity: .9;
   filter: grayscale(1) brightness(2.8);
-  transform: translateY(-2px);
 }
 
 /* ── responsivo ── */

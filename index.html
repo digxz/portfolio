@@ -48,39 +48,41 @@
 
   <!-- ── Navbar desktop ── -->
   <nav class="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="navbar__inner">
 
-    <a href="#" class="nav__logo" aria-label="Voltar ao topo">dr</a>
+      <a href="#" class="nav__logo" aria-label="Voltar ao topo">dr</a>
 
-    <ul role="list">
-      <li class="nav__itens"><a id="nav_about"      href="#aboutme__title"    aria-current="false">sobre</a></li>
-      <li class="nav__itens"><a id="nav_experience" href="#experience__title" aria-current="false">experiência</a></li>
-      <li class="nav__itens"><a id="nav_projects"   href="#projects__title"   aria-current="false">projetos</a></li>
-      <li class="nav__itens"><a id="nav_contact"    href="#contact__title"    aria-current="false">contato</a></li>
-    </ul>
+      <ul role="list">
+        <li class="nav__itens"><a id="nav_about"      href="#aboutme__title"    aria-current="false">sobre</a></li>
+        <li class="nav__itens"><a id="nav_experience" href="#experience__title" aria-current="false">experiência</a></li>
+        <li class="nav__itens"><a id="nav_projects"   href="#projects__title"   aria-current="false">projetos</a></li>
+        <li class="nav__itens"><a id="nav_contact"    href="#contact__title"    aria-current="false">contato</a></li>
+      </ul>
 
-    <div class="navbar__right">
-      <div class="lang-dropdown" id="lang-dropdown">
-        <button class="lang-dropdown__trigger" id="lang-trigger" aria-haspopup="listbox" aria-expanded="false">
-          <svg class="lang-dropdown__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M12 3c-2.5 3-4 5.6-4 9s1.5 6 4 9M12 3c2.5 3 4 5.6 4 9s-1.5 6-4 9M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <span id="lang-current">PT</span>
-          <svg class="lang-dropdown__chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+      <div class="navbar__right">
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-dropdown__trigger" id="lang-trigger" aria-haspopup="listbox" aria-expanded="false">
+            <svg class="lang-dropdown__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 3c-2.5 3-4 5.6-4 9s1.5 6 4 9M12 3c2.5 3 4 5.6 4 9s-1.5 6-4 9M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span id="lang-current">PT</span>
+            <svg class="lang-dropdown__chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <ul class="lang-dropdown__menu" role="listbox" aria-label="Idiomas disponíveis">
+            <li><button class="lang-opt active" data-lang="pt-BR" role="option" aria-selected="true">PT</button></li>
+            <li><button class="lang-opt"        data-lang="en"    role="option" aria-selected="false">EN</button></li>
+            <li><button class="lang-opt"        data-lang="es"    role="option" aria-selected="false">ES</button></li>
+          </ul>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
         </button>
-        <ul class="lang-dropdown__menu" role="listbox" aria-label="Idiomas disponíveis">
-          <li><button class="lang-opt active" data-lang="pt-BR" role="option" aria-selected="true">PT</button></li>
-          <li><button class="lang-opt"        data-lang="en"    role="option" aria-selected="false">EN</button></li>
-          <li><button class="lang-opt"        data-lang="es"    role="option" aria-selected="false">ES</button></li>
-        </ul>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
 
+    </div>
   </nav>
 
   <!-- ── Mobile drawer ── -->
@@ -126,36 +128,53 @@
     <!-- ── Sobre ── -->
     <p id="aboutme__title" class="titles scroll">sobre</p>
     <section class="about scroll" aria-labelledby="aboutme__title">
-      <p id="about_p1">Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no <span class="emphasis">Itaú Unibanco</span>!</p>
-      <p id="about_p2">Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!</p>
+      <p id="about_p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.</p>
+      <p id="about_p2">Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
     </section>
 
     <!-- ── Experiência ── -->
     <p id="experience__title" class="titles scroll">experiência</p>
     <section class="experience scroll" aria-labelledby="experience__title">
       <div class="timeline">
-        <article class="timeline__item">
+        <article class="timeline__item timeline__item--promotion">
+          <span class="timeline__marker" aria-hidden="true"></span>
           <div class="timeline__content">
-            <span class="timeline__period">2024 — presente</span>
-            <h2 class="timeline__role">Lorem ipsum dolor sit amet</h2>
-            <span class="timeline__company">Lorem Ipsum Analytics</span>
-            <p class="timeline__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <div class="timeline__roles">
+              <div class="timeline__role-item">
+                <span class="timeline__period">out/2026 — presente</span>
+                <h2 class="timeline__role"><span class="timeline__role-title">Analista de Dados Jr.</span> <span class="timeline__company">Itaú Unibanco</span></h2>
+                <p class="timeline__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+              </div>
+              <div class="timeline__role-item">
+                <span class="timeline__period">jul/2025 — out/2026</span>
+                <h2 class="timeline__role"><span class="timeline__role-title">Estagiário de Análise de Dados</span></h2>
+                <p class="timeline__description">Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+              </div>
+            </div>
           </div>
         </article>
         <article class="timeline__item">
+          <span class="timeline__marker" aria-hidden="true"></span>
           <div class="timeline__content">
-            <span class="timeline__period">2022 — 2024</span>
-            <h2 class="timeline__role">Consectetur adipiscing elit</h2>
-            <span class="timeline__company">Dolor Sit Amet Ltda.</span>
-            <p class="timeline__description">Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+            <div class="timeline__roles">
+              <div class="timeline__role-item">
+                <span class="timeline__period">ago/2024 — jul/2025</span>
+                <h2 class="timeline__role"><span class="timeline__role-title">Estagiário em Sistemas e Automação</span> <span class="timeline__company">Nestlé</span></h2>
+                <p class="timeline__description">Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+              </div>
+            </div>
           </div>
         </article>
         <article class="timeline__item">
+          <span class="timeline__marker" aria-hidden="true"></span>
           <div class="timeline__content">
-            <span class="timeline__period">2020 — 2022</span>
-            <h2 class="timeline__role">Sed do eiusmod tempor</h2>
-            <span class="timeline__company">Incididunt Lab</span>
-            <p class="timeline__description">Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+            <div class="timeline__roles">
+              <div class="timeline__role-item">
+                <span class="timeline__period">mai/2022 — ago/2024</span>
+                <h2 class="timeline__role"><span class="timeline__role-title">Assistente de TI</span> <span class="timeline__company">Escola Pro-Tec</span></h2>
+                <p class="timeline__description">Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
+              </div>
+            </div>
           </div>
         </article>
       </div>
@@ -195,14 +214,6 @@
           <img src="assets/images/github-logo.svg" alt="" class="contact__icon contact__icon--img" aria-hidden="true" width="22" height="22" loading="lazy">
           <span class="contact__item-text">GitHub</span>
         </a>
-
-        <div class="contact__item contact__item--static" role="note" aria-label="Localização: Brasil">
-          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-            <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <span id="contact__location" class="contact__item-text">Brasil</span>
-        </div>
 
       </div>
     </section>

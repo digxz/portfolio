@@ -1,12 +1,8 @@
-#aboutme__title {
-  padding: 5rem 0 0;
-}
-
 /* ── todos os parágrafos do about com fonte e ritmo idênticos ── */
 .about p,
 .about .sub-about {
-  font-size: 1.5rem;
-  line-height: 2.6rem;
+  font-size: calc(1.2rem * var(--text-scale));
+  line-height: calc(2.1rem * var(--text-scale));
   color: var(--color-text-body);
   margin: 0 0 1.4rem;
 }
@@ -15,6 +11,8 @@
   margin-top: 1rem;
   margin-bottom: 0;
 }
+
+.about > :last-child { margin-bottom: 0; }
 
 /* sem destaque em laranja — negrito no lugar */
 .emphasis {
@@ -25,22 +23,22 @@
 /* ── responsivo ── */
 @media screen and (max-width: 480px) {
   .about { margin: 0 3rem; }
-  .about p, .about .sub-about { font-size: 1.2rem; line-height: 2.2rem; }
+  .about p, .about .sub-about { font-size: calc(1rem * var(--text-scale)); line-height: calc(1.75rem * var(--text-scale)); }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .about { margin: 0 6rem; }
-  .about p, .about .sub-about { font-size: 1.2rem; line-height: 2.2rem; }
+  .about p, .about .sub-about { font-size: calc(1rem * var(--text-scale)); line-height: calc(1.75rem * var(--text-scale)); }
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .about { margin: 0 8rem; }
-  .about p, .about .sub-about { font-size: 1.3rem; line-height: 2.4rem; }
+  .about p, .about .sub-about { font-size: calc(1.05rem * var(--text-scale)); line-height: calc(1.85rem * var(--text-scale)); }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .about { margin: 0 10rem; }
-  .about p, .about .sub-about { font-size: 1.4rem; line-height: 2.5rem; }
+  .about p, .about .sub-about { font-size: calc(1.1rem * var(--text-scale)); line-height: calc(1.95rem * var(--text-scale)); }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
@@ -49,5 +47,5 @@
 
 @media screen and (min-width: 1920px) {
   .about { margin: 0 25%; }
-  .about p, .about .sub-about { font-size: 1.8rem; line-height: 3rem; }
+  .about p, .about .sub-about { font-size: calc(1.4rem * var(--text-scale)); line-height: calc(2.45rem * var(--text-scale)); }
 }
