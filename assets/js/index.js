@@ -1,6 +1,6 @@
 // ─── ScrollReveal ────────────────────────────────────────────────
 window.revelar = ScrollReveal({ reset: false });
-revelar.reveal(".scroll",  { duration: 1500 });
+revelar.reveal(".scroll",  { duration: 1500, interval: 80 });
 revelar.reveal(".titles",  { duration: 1500 });
 
 // ─── Traduções ───────────────────────────────────────────────────
@@ -11,6 +11,7 @@ const i18n = {
     about_title: "sobre",
     about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
     about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    tech_tags: "tecnologias utilizadas",
     experience_title: "experiência",
     experience_items: [
       {
@@ -61,6 +62,7 @@ const i18n = {
     about_title: "about",
     about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
     about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    tech_tags: "technologies used",
     experience_title: "experience",
     experience_items: [
       {
@@ -111,6 +113,7 @@ const i18n = {
     about_title: "sobre",
     about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
     about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    tech_tags: "tecnologías utilizadas",
     experience_title: "experiencia",
     experience_items: [
       {
@@ -180,6 +183,7 @@ function applyLang(lang) {
   document.getElementById("about_p2").textContent = t.about_p2;
 
   document.getElementById("experience__title").textContent = t.experience_title;
+  document.querySelectorAll(".timeline__tags").forEach(el => el.setAttribute("aria-label", t.tech_tags));
   document.querySelectorAll(".timeline__item").forEach((item, index) => {
     const data = t.experience_items[index];
     if (!data) return;
@@ -199,7 +203,7 @@ function applyLang(lang) {
 
   document.getElementById("projects__title").textContent = t.projects_title;
   document.querySelectorAll(".card__title").forEach(el => {
-    el.textContent = `${t.card_project} ${String(el.dataset.cardIndex).padStart(2, "0")}`;
+    el.textContent = `${t.card_project} ${String(el.closest(".project__card").dataset.cardIndex).padStart(2, "0")}`;
   });
   document.querySelectorAll(".card__description").forEach(el => {
     el.textContent = t.card_wip;

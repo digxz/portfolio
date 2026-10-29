@@ -47,7 +47,7 @@
 
 .timeline__item {
   position: relative;
-  padding-bottom: 2.4rem;
+  padding-bottom: 4.5rem;
 }
 
 .timeline__item:last-child { padding-bottom: 0; }
@@ -56,7 +56,7 @@
 .timeline__marker {
   position: absolute;
   left: -2rem;
-  top: 1.7rem;
+  top: .08rem;
   width: .85rem;
   height: .85rem;
   translate: -50% 0;
@@ -94,25 +94,15 @@
   animation: bulletGlow 3s ease-in-out infinite;
 }
 
-/* ── cartão do item ── */
+/* ── conteúdo do item (sem caixa, apoiado na linha) ── */
 .timeline__content {
-  font-size: calc(1rem * var(--text-scale));
-  background-color: var(--color-bg-card);
-  border: 1px solid #232323;
-  border-radius: 8px;
-  padding: 1.5rem 1.7rem;
-  transition: background-color .25s ease, border-color .25s ease;
-}
-
-.timeline__item:hover .timeline__content {
-  background-color: #191919;
-  border-color: #3a3a3a;
+  font-size: calc(1rem * var(--text-scale) * var(--role-scale, 1));
 }
 
 /* ── empresa (inline com o cargo) ── */
 .timeline__company {
   font-family: "Archivo", sans-serif;
-  font-size: calc(.95rem * var(--text-scale));
+  font-size: calc(.95rem * var(--text-scale) * var(--role-scale, 1));
   font-weight: 400;
   color: var(--color-text-muted);
   white-space: nowrap;
@@ -128,17 +118,16 @@
 .timeline__roles {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
 }
 
 .timeline__role-item {
-  font-size: calc(1rem * var(--text-scale));
+  font-size: calc(1rem * var(--text-scale) * var(--role-scale, 1));
 }
 
 .timeline__period {
   display: inline-block;
   font-family: "Archivo", sans-serif;
-  font-size: calc(.8rem * var(--text-scale));
+  font-size: calc(.8rem * var(--text-scale) * var(--role-scale, 1));
   font-weight: 600;
   letter-spacing: .04em;
   text-transform: lowercase;
@@ -148,7 +137,7 @@
 
 .timeline__role {
   font-family: "Archivo", sans-serif;
-  font-size: calc(1.35rem * var(--text-scale));
+  font-size: calc(1.35rem * var(--text-scale) * var(--role-scale, 1));
   font-weight: 600;
   line-height: 1.4;
   margin: 0 0 .45rem;
@@ -156,100 +145,76 @@
 
 .timeline__description {
   font-family: "Archivo", sans-serif;
-  font-size: calc(1.05rem * var(--text-scale));
-  line-height: calc(1.75rem * var(--text-scale));
+  font-size: calc(1.05rem * var(--text-scale) * var(--role-scale, 1));
+  line-height: calc(1.75rem * var(--text-scale) * var(--role-scale, 1));
   color: var(--color-text-body);
   margin: 0;
 }
 
-/* ── evolução de cargo: destaque diferente das demais experiências ── */
-.timeline__item--promotion .timeline__content {
-  border-color: rgba(248, 129, 4, .25);
+/* ── tags: tecnologias utilizadas na experiência ── */
+.timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .9rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.timeline__item--promotion:hover .timeline__content {
-  border-color: rgba(248, 129, 4, .4);
+.timeline__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .2rem .6rem;
+  border: 1px solid #262626;
+  border-radius: 999px;
+  background-color: #181818;
+  font-family: "Archivo", sans-serif;
+  font-size: calc(.75rem * var(--text-scale));
+  line-height: 1.2;
+  letter-spacing: .02em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  transition: color .25s ease, border-color .25s ease, background-color .25s ease;
 }
 
-.timeline__item--promotion .timeline__marker {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  animation: bulletGlow 3s ease-in-out infinite;
+.timeline__role-item--previous .timeline__tag { opacity: .85; }
+
+.timeline__item:hover .timeline__tag,
+.timeline__item:focus-within .timeline__tag {
+  color: var(--color-text-body);
+  border-color: #343434;
+  background-color: #1d1d1d;
 }
 
-.timeline__item--promotion .timeline__roles {
-  position: relative;
-  padding-left: 1.4rem;
+/* cargos anteriores da mesma empresa: menores e recuados como um tab */
+.timeline__role-item--previous {
+  --role-scale: .88;
+  margin-top: 1.6rem;
+  padding-left: 2rem;
 }
 
-.timeline__item--promotion .timeline__role-item {
-  position: relative;
-}
-
-.timeline__item--promotion .timeline__role-item::before {
-  content: "";
-  position: absolute;
-  left: -1.4rem;
-  top: .25rem;
-  width: .62rem;
-  height: .62rem;
-  translate: -50% 0;
-  border: 2px solid var(--color-accent);
-  border-radius: 50%;
-  background-color: var(--color-bg-card);
-  transition: background-color .25s ease, box-shadow .25s ease;
-  z-index: 1;
-}
-
-.timeline__item--promotion .timeline__role-item:first-child::before {
-  background-color: var(--color-accent);
-  animation: bulletGlow 3s ease-in-out infinite;
-}
-
-.timeline__item--promotion:hover .timeline__role-item::before,
-.timeline__item--promotion:focus-within .timeline__role-item::before {
-  animation: bulletGlow 3s ease-in-out infinite;
-}
-
-/* conecta os cargos dentro da mesma empresa */
-.timeline__item--promotion .timeline__role-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: calc(-1.4rem - 1px);
-  top: 1.2rem;
-  bottom: -1.9rem;
-  width: 2px;
-  background-color: rgba(248, 129, 4, .45);
-  border-radius: 2px;
-  transition: background-color .25s ease, box-shadow .25s ease;
-}
-
-.timeline__item--promotion:hover .timeline__role-item:not(:last-child)::after,
-.timeline__item--promotion:focus-within .timeline__role-item:not(:last-child)::after {
-  background-color: rgba(248, 129, 4, .8);
-  box-shadow: 0 0 6px rgba(248, 129, 4, .35);
-}
+.timeline__role-item--previous .timeline__role { color: var(--color-text-body); }
 
 /* ── responsivo ── */
 @media screen and (max-width: 480px) {
   .experience { margin: 0 1.5rem; }
-  .timeline__marker { top: 1.4rem; }
-  .timeline__content { padding: 1.2rem 1.3rem; }
-  .timeline__role { font-size: calc(1.1rem * var(--text-scale)); }
-  .timeline__company { font-size: calc(.85rem * var(--text-scale)); }
-  .timeline__description { font-size: calc(.95rem * var(--text-scale)); line-height: calc(1.6rem * var(--text-scale)); }
+  .timeline__item { padding-bottom: 4.2rem; }
+  .timeline__role { font-size: calc(1.15rem * var(--text-scale) * var(--role-scale, 1)); }
+  .timeline__company { font-size: calc(.9rem * var(--text-scale) * var(--role-scale, 1)); }
+  .timeline__description { font-size: calc(1.05rem * var(--text-scale) * var(--role-scale, 1)); line-height: calc(1.75rem * var(--text-scale) * var(--role-scale, 1)); }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .experience { margin: 0 6rem; }
-  .timeline__role { font-size: calc(1.15rem * var(--text-scale)); }
-  .timeline__description { font-size: calc(1rem * var(--text-scale)); line-height: calc(1.65rem * var(--text-scale)); }
+  .timeline__role { font-size: calc(1.15rem * var(--text-scale) * var(--role-scale, 1)); }
+  .timeline__description { font-size: calc(1.05rem * var(--text-scale) * var(--role-scale, 1)); line-height: calc(1.7rem * var(--text-scale) * var(--role-scale, 1)); }
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .experience { margin: 0 8rem; }
-  .timeline__role { font-size: calc(1.25rem * var(--text-scale)); }
-  .timeline__description { font-size: calc(1.05rem * var(--text-scale)); line-height: calc(1.7rem * var(--text-scale)); }
+  .timeline__role { font-size: calc(1.25rem * var(--text-scale) * var(--role-scale, 1)); }
+  .timeline__description { font-size: calc(1.05rem * var(--text-scale) * var(--role-scale, 1)); line-height: calc(1.7rem * var(--text-scale) * var(--role-scale, 1)); }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -258,28 +223,22 @@
 
 @media screen and (min-width: 1920px) {
   .experience { margin: 0 25%; }
-  .timeline__role { font-size: calc(1.55rem * var(--text-scale)); }
-  .timeline__company { font-size: calc(1.15rem * var(--text-scale)); }
-  .timeline__description { font-size: calc(1.2rem * var(--text-scale)); line-height: calc(2rem * var(--text-scale)); }
+  .timeline__role { font-size: calc(1.55rem * var(--text-scale) * var(--role-scale, 1)); }
+  .timeline__company { font-size: calc(1.15rem * var(--text-scale) * var(--role-scale, 1)); }
+  .timeline__description { font-size: calc(1.2rem * var(--text-scale) * var(--role-scale, 1)); line-height: calc(2rem * var(--text-scale) * var(--role-scale, 1)); }
 }
 
 /* ── acessibilidade: sem animação ── */
 @media (prefers-reduced-motion: reduce) {
   .timeline::after { transition: none; }
 
-  .timeline__marker,
-  .timeline__item--promotion .timeline__marker,
-  .timeline__item--promotion .timeline__role-item::before {
+  .timeline__marker {
     animation: none;
     transform: none;
   }
 
   .timeline__item:hover .timeline__marker,
-  .timeline__item:focus-within .timeline__marker,
-  .timeline__item--promotion .timeline__marker,
-  .timeline__item--promotion .timeline__role-item:first-child::before,
-  .timeline__item--promotion:hover .timeline__role-item::before,
-  .timeline__item--promotion:focus-within .timeline__role-item::before {
+  .timeline__item:focus-within .timeline__marker {
     box-shadow: 0 0 7px 2px rgba(248, 129, 4, .35);
   }
 }

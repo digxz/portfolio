@@ -1,92 +1,98 @@
 .projects {
   display: grid;
-  grid-template-columns: 22rem 22rem 22rem;
-  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 22rem));
+  gap: .8rem;
   justify-content: center;
-  align-items: center;
+  padding: 0 1.5rem;
 }
 
 .project__card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 22rem;
-  height: 15rem;
+  min-height: 15rem;
+  padding: 1.6rem 2rem 1.8rem;
   background-color: transparent;
   border: 1px solid #232323;
   border-radius: 8px;
+  overflow: hidden;
   transition: background-color .25s ease, border-color .25s ease;
 }
 
-.project__card:hover {
+.project__card:hover,
+.project__card:focus-within {
   background-color: #161616;
   border-color: #2f2f2f;
 }
 
+/* linha de destaque que entra na base do card */
+.project__card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width .35s cubic-bezier(.22, .61, .36, 1);
+}
+
+.project__card:hover::before,
+.project__card:focus-within::before { width: 100%; }
+
+/* número grande como elemento gráfico */
+.project__card::after {
+  content: attr(data-card-index);
+  position: absolute;
+  right: 1.4rem;
+  bottom: -.8rem;
+  font-family: "Archivo", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.05em;
+  color: rgba(241, 241, 241, .04);
+  pointer-events: none;
+}
+
 .card__title {
+  position: relative;
+  z-index: 1;
   font-family: "Archivo", sans-serif;
   font-size: calc(1.4rem * var(--text-scale));
   font-weight: 500;
   color: var(--color-text);
-  margin: 1.6rem 0 0 2rem;
+  margin: 0;
 }
 
 .card__description {
+  position: relative;
+  z-index: 1;
+  margin: auto 0 0;
   font-family: "Archivo", sans-serif;
   color: var(--color-text-muted);
   font-size: calc(1.2rem * var(--text-scale));
   line-height: 1.6;
-  margin: 1rem 2rem 0;
 }
 
-/* mobile */
-@media screen and (min-width: 320px) and (max-width: 480px) {
+/* ── responsivo ── */
+@media screen and (max-width: 991px) {
   .projects {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-    margin: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 44rem;
+    margin-inline: auto;
+    gap: .6rem;
   }
 
-  .project__card {
-    width: 80vw;
-    height: 13rem;
-  }
+  .project__card { min-height: 13rem; }
+  .project__card:last-child { grid-column: 1 / -1; }
 }
 
-/* small displays */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .projects {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-    margin: auto;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 26rem;
   }
 
-  .project__card {
-    height: 13rem;
-  }
-}
-
-/* tablets */
-@media screen and (min-width: 769px) and (max-width: 991px) {
-  .projects {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-    margin: auto;
-  }
-
-  .project__card {
-    height: 13rem;
-  }
-}
-
-/* bigger tablets and notebooks */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .projects {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
-    margin: auto;
-  }
-
-  .project__card {
-    height: 13rem;
-  }
+  .project__card:last-child { grid-column: auto; }
 }

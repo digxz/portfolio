@@ -18,6 +18,14 @@
 
 html { scroll-behavior: smooth; }
 
+/* foco visível para teclado */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) { outline: none; }
+
 body {
   font-family: "Archivo", sans-serif;
   background-color: var(--color-bg);
@@ -39,7 +47,7 @@ body {
 ::-webkit-scrollbar       { width: 0.5rem; }
 ::-webkit-scrollbar-thumb { background-color: var(--color-accent); border-radius: 10rem; }
 
-::selection { background-color: var(--color-accent); color: var(--color-text); }
+::selection { background-color: var(--color-accent); color: #111; }
 
 /* ── Rodapé ── */
 .site-footer {
@@ -115,13 +123,10 @@ body {
   .timeline::before { background: #999; }
   .timeline::after  { display: none; }
   .timeline__marker { background: #fff; border-color: #999; box-shadow: none; animation: none; }
-  .timeline__item--promotion .timeline__marker { background: #999; }
-  .timeline__content { background: transparent; border-color: #ccc; }
   .timeline__role, .timeline__description { color: #111; }
   .timeline__period, .timeline__company { color: #555; }
-  .timeline__item--promotion .timeline__role-item::before { background: #fff; border-color: #999; }
-  .timeline__item--promotion .timeline__role-item:first-child::before { background: #999; }
-  .timeline__item--promotion .timeline__role-item:not(:last-child)::after { background: #999; }
+  .timeline__item { padding-bottom: 1.2rem; }
+  .timeline__tag { color: #555; border-color: #999; background: transparent; opacity: 1; }
 
   .contact__items { flex-direction: column; align-items: flex-start; }
   .contact__item  { border: none; padding: .3rem 0; background: transparent; }

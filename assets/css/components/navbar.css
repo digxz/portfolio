@@ -6,9 +6,11 @@ a { text-decoration: none; }
   top: 0;
   left: 0;
   width: 0%;
-  height: 1px;
+  height: 2px;
   background-color: var(--color-accent);
-  opacity: .6;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 8px rgba(248, 129, 4, .45);
+  opacity: .8;
   z-index: 9999;
   transition: width .1s linear;
   pointer-events: none;

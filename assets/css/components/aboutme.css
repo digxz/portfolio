@@ -11,12 +11,12 @@
 /* ── responsivo ── */
 @media screen and (max-width: 480px) {
   .about { margin: 0 3rem; }
-  .about p { font-size: calc(1rem * var(--text-scale)); line-height: calc(1.75rem * var(--text-scale)); }
+  .about p { font-size: calc(1.1rem * var(--text-scale)); line-height: calc(1.9rem * var(--text-scale)); }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .about { margin: 0 6rem; }
-  .about p { font-size: calc(1rem * var(--text-scale)); line-height: calc(1.75rem * var(--text-scale)); }
+  .about p { font-size: calc(1.1rem * var(--text-scale)); line-height: calc(1.9rem * var(--text-scale)); }
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
