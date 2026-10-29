@@ -52,9 +52,10 @@
     <a href="#" class="nav__logo" aria-label="Voltar ao topo">dr</a>
 
     <ul role="list">
-      <li class="nav__itens"><a id="nav_about"    href="#aboutme__title"  aria-current="false">sobre mim</a></li>
-      <li class="nav__itens"><a id="nav_projects" href="#projects__title" aria-current="false">projetos</a></li>
-      <li class="nav__itens"><a id="nav_contact"  href="#contact__title"  aria-current="false">contato</a></li>
+      <li class="nav__itens"><a id="nav_about"      href="#aboutme__title"    aria-current="false">sobre</a></li>
+      <li class="nav__itens"><a id="nav_experience" href="#experience__title" aria-current="false">experiência</a></li>
+      <li class="nav__itens"><a id="nav_projects"   href="#projects__title"   aria-current="false">projetos</a></li>
+      <li class="nav__itens"><a id="nav_contact"    href="#contact__title"    aria-current="false">contato</a></li>
     </ul>
 
     <div class="navbar__right">
@@ -84,9 +85,10 @@
 
   <!-- ── Mobile drawer ── -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-    <a id="mob_about"    href="#aboutme__title">sobre mim</a>
-    <a id="mob_projects" href="#projects__title">projetos</a>
-    <a id="mob_contact"  href="#contact__title">contato</a>
+    <a id="mob_about"      href="#aboutme__title">sobre</a>
+    <a id="mob_experience" href="#experience__title">experiência</a>
+    <a id="mob_projects"   href="#projects__title">projetos</a>
+    <a id="mob_contact"    href="#contact__title">contato</a>
     <div class="mobile-lang" role="group" aria-label="Selecionar idioma">
       <svg class="mobile-lang__globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
@@ -121,11 +123,42 @@
       </div>
     </section>
 
-    <!-- ── Sobre mim ── -->
-    <p id="aboutme__title" class="titles scroll">sobre mim</p>
+    <!-- ── Sobre ── -->
+    <p id="aboutme__title" class="titles scroll">sobre</p>
     <section class="about scroll" aria-labelledby="aboutme__title">
       <p id="about_p1">Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no <span class="emphasis">Itaú Unibanco</span>!</p>
       <p id="about_p2">Atualmente estou cursando o Ensino Superior em <span class="emphasis">Data Science</span>, na <span class="emphasis">FIAP</span>!</p>
+    </section>
+
+    <!-- ── Experiência ── -->
+    <p id="experience__title" class="titles scroll">experiência</p>
+    <section class="experience scroll" aria-labelledby="experience__title">
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="timeline__content">
+            <span class="timeline__period">2024 — presente</span>
+            <h2 class="timeline__role">Lorem ipsum dolor sit amet</h2>
+            <span class="timeline__company">Lorem Ipsum Analytics</span>
+            <p class="timeline__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+          </div>
+        </article>
+        <article class="timeline__item">
+          <div class="timeline__content">
+            <span class="timeline__period">2022 — 2024</span>
+            <h2 class="timeline__role">Consectetur adipiscing elit</h2>
+            <span class="timeline__company">Dolor Sit Amet Ltda.</span>
+            <p class="timeline__description">Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+          </div>
+        </article>
+        <article class="timeline__item">
+          <div class="timeline__content">
+            <span class="timeline__period">2020 — 2022</span>
+            <h2 class="timeline__role">Sed do eiusmod tempor</h2>
+            <span class="timeline__company">Incididunt Lab</span>
+            <p class="timeline__description">Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- ── Projetos ── -->

@@ -109,6 +109,12 @@ body {
   .about p, .about .sub-about { color: #333; font-size: 11pt; line-height: 1.6; }
   .emphasis { font-weight: 700; }
 
+  .timeline::before { background: #999; }
+  .timeline__item::before { background: #fff; border-color: #999; }
+  .timeline__content { background: transparent; border-color: #ccc; }
+  .timeline__role, .timeline__description { color: #111; }
+  .timeline__period, .timeline__company { color: #555; }
+
   .contact__items { flex-direction: column; align-items: flex-start; }
   .contact__item  { border: none; padding: .3rem 0; background: transparent; }
   .contact__item-text { color: #111; }

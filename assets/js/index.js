@@ -6,11 +6,32 @@ revelar.reveal(".titles",  { duration: 1500 });
 // ─── Traduções ───────────────────────────────────────────────────
 const i18n = {
   "pt-BR": {
-    nav_about: "sobre mim", nav_projects: "projetos", nav_contact: "contato",
+    nav_about: "sobre", nav_experience: "experiência", nav_projects: "projetos", nav_contact: "contato",
     greeting: "Olá! Eu sou o", subtitle: "Analista de Dados Júnior",
-    about_title: "sobre mim",
+    about_title: "sobre",
     about_p1:  "Meu nome é Diego Ramirez, e eu sou Analista de Dados Júnior no",
     about_p2:  "Atualmente estou cursando o Ensino Superior em", about_p2b: "na",
+    experience_title: "experiência",
+    experience_items: [
+      {
+        period: "2024 — presente",
+        role: "Lorem ipsum dolor sit amet",
+        company: "Lorem Ipsum Analytics",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      },
+      {
+        period: "2022 — 2024",
+        role: "Consectetur adipiscing elit",
+        company: "Dolor Sit Amet Ltda.",
+        description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+      },
+      {
+        period: "2020 — 2022",
+        role: "Sed do eiusmod tempor",
+        company: "Incididunt Lab",
+        description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+      },
+    ],
     connect: "Conecte-se comigo", projects_title: "projetos",
     card_project: "Projeto", card_wip: "Projeto em desenvolvimento...",
     contact_title: "contato",
@@ -20,11 +41,32 @@ const i18n = {
     menu_label: "Menu",
   },
   "en": {
-    nav_about: "about me", nav_projects: "projects", nav_contact: "contact",
+    nav_about: "about", nav_experience: "experience", nav_projects: "projects", nav_contact: "contact",
     greeting: "Hi! I'm", subtitle: "Junior Data Analyst",
-    about_title: "about me",
+    about_title: "about",
     about_p1:  "My name is Diego Ramirez, and I'm a Junior Data Analyst at",
     about_p2:  "I'm currently pursuing a degree in", about_p2b: "at",
+    experience_title: "experience",
+    experience_items: [
+      {
+        period: "2024 — present",
+        role: "Lorem ipsum dolor sit amet",
+        company: "Lorem Ipsum Analytics",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      },
+      {
+        period: "2022 — 2024",
+        role: "Consectetur adipiscing elit",
+        company: "Dolor Sit Amet Ltd.",
+        description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+      },
+      {
+        period: "2020 — 2022",
+        role: "Sed do eiusmod tempor",
+        company: "Incididunt Lab",
+        description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+      },
+    ],
     connect: "Connect with me", projects_title: "projects",
     card_project: "Project", card_wip: "Project under development...",
     contact_title: "contact",
@@ -34,11 +76,32 @@ const i18n = {
     menu_label: "Menu",
   },
   "es": {
-    nav_about: "sobre mí", nav_projects: "proyectos", nav_contact: "contacto",
+    nav_about: "sobre", nav_experience: "experiencia", nav_projects: "proyectos", nav_contact: "contacto",
     greeting: "¡Hola! Soy", subtitle: "Analista de Datos Junior",
-    about_title: "sobre mí",
+    about_title: "sobre",
     about_p1:  "Mi nombre es Diego Ramirez, y soy Analista de Datos Junior en",
     about_p2:  "Actualmente curso la educación superior en", about_p2b: "en",
+    experience_title: "experiencia",
+    experience_items: [
+      {
+        period: "2024 — actualidad",
+        role: "Lorem ipsum dolor sit amet",
+        company: "Lorem Ipsum Analytics",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      },
+      {
+        period: "2022 — 2024",
+        role: "Consectetur adipiscing elit",
+        company: "Dolor Sit Amet Ltda.",
+        description: "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.",
+      },
+      {
+        period: "2020 — 2022",
+        role: "Sed do eiusmod tempor",
+        company: "Incididunt Lab",
+        description: "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.",
+      },
+    ],
     connect: "Conéctate conmigo", projects_title: "proyectos",
     card_project: "Proyecto", card_wip: "Proyecto en desarrollo...",
     contact_title: "contacto",
@@ -55,9 +118,11 @@ function applyLang(lang) {
   if (!t) return;
 
   document.getElementById("nav_about").textContent    = t.nav_about;
+  document.getElementById("nav_experience").textContent = t.nav_experience;
   document.getElementById("nav_projects").textContent = t.nav_projects;
   document.getElementById("nav_contact").textContent  = t.nav_contact;
   document.getElementById("mob_about").textContent    = t.nav_about;
+  document.getElementById("mob_experience").textContent = t.nav_experience;
   document.getElementById("mob_projects").textContent = t.nav_projects;
   document.getElementById("mob_contact").textContent  = t.nav_contact;
 
@@ -70,6 +135,16 @@ function applyLang(lang) {
     `${t.about_p1} <span class="emphasis">Itaú Unibanco</span>!`;
   document.getElementById("about_p2").innerHTML =
     `${t.about_p2} <span class="emphasis">Data Science</span>, ${t.about_p2b} <span class="emphasis">FIAP</span>!`;
+
+  document.getElementById("experience__title").textContent = t.experience_title;
+  document.querySelectorAll(".timeline__item").forEach((item, index) => {
+    const data = t.experience_items[index];
+    if (!data) return;
+    item.querySelector(".timeline__period").textContent      = data.period;
+    item.querySelector(".timeline__role").textContent        = data.role;
+    item.querySelector(".timeline__company").textContent     = data.company;
+    item.querySelector(".timeline__description").textContent = data.description;
+  });
 
   document.getElementById("projects__title").textContent = t.projects_title;
   document.querySelectorAll(".card__title").forEach(el => {
@@ -175,9 +250,10 @@ function initLangDropdown() {
 // ─── Nav ativa (IntersectionObserver) ────────────────────────────
 function initActiveNav() {
   const sections = [
-    { el: document.getElementById("aboutme__title"),  id: "nav_about"    },
-    { el: document.getElementById("projects__title"), id: "nav_projects" },
-    { el: document.getElementById("contact__title"),  id: "nav_contact"  },
+    { el: document.getElementById("aboutme__title"),    id: "nav_about"      },
+    { el: document.getElementById("experience__title"), id: "nav_experience" },
+    { el: document.getElementById("projects__title"),   id: "nav_projects"   },
+    { el: document.getElementById("contact__title"),    id: "nav_contact"    },
   ];
   const navLinks = sections.map(s => document.getElementById(s.id));
 

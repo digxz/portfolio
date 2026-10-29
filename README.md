@@ -11,7 +11,8 @@
 O projeto é composto pelas seguintes seções:
 
 - **Home:** Home do Portfolio;
-- **About Me:** Apresenta informações sobre mim;
+- **About:** Apresenta informações sobre mim;
+- **Experience:** Trajetória profissional em formato de linha do tempo;
 - **Projects:** Seção que apresenta os projetos.
 
 ---
