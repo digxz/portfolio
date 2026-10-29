@@ -90,11 +90,3 @@
     height: 13rem;
   }
 }
-
-/* desktops */
-@media screen and (min-width: 1200px) and (max-width: 1919px) {
-}
-
-/* bigger displays */
-@media screen and (min-width: 1920px) {
-}

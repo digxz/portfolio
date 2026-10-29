@@ -99,7 +99,7 @@ body {
 /* ── @media print ── */
 @media print {
   .navbar, .mobile-menu, .hamburger, .skip-link,
-  .site-footer, .lang-switcher { display: none !important; }
+  .site-footer { display: none !important; }
 
   body {
     background: #fff;
@@ -110,8 +110,7 @@ body {
   .titles { visibility: visible; font-size: 18pt; color: #111; }
   .scroll  { visibility: visible; }
 
-  .about p, .about .sub-about { color: #333; font-size: 11pt; line-height: 1.6; }
-  .emphasis { font-weight: 700; }
+  .about p { color: #333; font-size: 11pt; line-height: 1.6; }
 
   .timeline::before { background: #999; }
   .timeline::after  { display: none; }

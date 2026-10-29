@@ -63,6 +63,7 @@
 
 .connect__icons a img {
   height: 2rem;
+  width: auto;
   opacity: .5;
   filter: grayscale(1) brightness(2);
   transition: opacity .25s ease, filter .25s ease;
@@ -72,6 +73,17 @@
   opacity: .9;
   filter: grayscale(1) brightness(2.8);
 }
+
+/* ícones inline (herdam a cor) */
+.connect__icons a svg {
+  width: 2rem;
+  height: 2rem;
+  color: #f1f1f1;
+  opacity: .5;
+  transition: opacity .25s ease;
+}
+
+.connect__icons a:hover svg { opacity: .9; }
 
 /* ── responsivo ── */
 @media screen and (max-width: 480px) {
@@ -87,6 +99,7 @@
   .apresentation__social       { gap: 1.2rem; padding-top: 1.4rem; margin-top: .6rem; justify-content: center; }
   .apresentation__social-label { font-size: .85rem; }
   .connect__icons a img        { height: 1.6rem; }
+  .connect__icons a svg        { width: 1.6rem; height: 1.6rem; }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -102,6 +115,7 @@
   .apresentation__social       { justify-content: center; }
   .apresentation__social-label { font-size: .9rem; }
   .connect__icons a img        { height: 1.8rem; }
+  .connect__icons a svg        { width: 1.8rem; height: 1.8rem; }
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
@@ -111,6 +125,7 @@
   }
   .apresentation__subtitle  { font-size: 1.2rem; }
   .connect__icons a img     { height: 1.9rem; }
+  .connect__icons a svg     { width: 1.9rem; height: 1.9rem; }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -134,6 +149,7 @@
   .apresentation__subtitle     { font-size: 1.8rem; }
   .apresentation__social-label { font-size: 1.3rem; }
   .connect__icons a img        { height: 2.4rem; }
+  .connect__icons a svg        { width: 2.4rem; height: 2.4rem; }
 }
 
 /* ── hero wrapper acessível ── */
