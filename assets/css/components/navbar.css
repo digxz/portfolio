@@ -64,7 +64,7 @@ a { text-decoration: none; }
   position: relative;
   color: var(--color-text-muted);
   font-family: "Archivo", sans-serif;
-  transition: color .3s;
+  transition: color .3s, opacity .3s;
 }
 
 .nav__itens a:hover       { color: var(--color-text); }

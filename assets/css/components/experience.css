@@ -48,6 +48,7 @@
 .timeline__item {
   position: relative;
   padding-bottom: 4.5rem;
+  transition: opacity .3s ease;
 }
 
 .timeline__item:last-child { padding-bottom: 0; }

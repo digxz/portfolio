@@ -59,6 +59,7 @@
 .connect__icons a {
   display: flex;
   align-items: center;
+  transition: opacity .3s ease;
 }
 
 .connect__icons a img {

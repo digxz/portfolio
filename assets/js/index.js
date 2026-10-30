@@ -236,6 +236,32 @@ function applyLang(lang) {
   document.documentElement.lang = lang;
 }
 
+// ─── Troca de idioma com fade suave ──────────────────────────────
+let currentLang  = "pt-BR";
+let langFadeTimer = null;
+
+const prefersReducedMotion = () =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function changeLang(lang) {
+  if (lang === currentLang) return;
+  currentLang = lang;
+
+  const main = document.querySelector(".main__content");
+  if (!main || prefersReducedMotion()) {
+    applyLang(lang);
+    return;
+  }
+
+  main.classList.add("lang-switching");
+  clearTimeout(langFadeTimer);
+  langFadeTimer = setTimeout(() => {
+    applyLang(lang);
+    // próximo frame: remove o fade-out e anima o fade-in
+    requestAnimationFrame(() => main.classList.remove("lang-switching"));
+  }, 180);
+}
+
 // ─── Barra de progresso ──────────────────────────────────────────
 function initProgressBar() {
   const bar = document.getElementById("progress-bar");
@@ -295,7 +321,7 @@ function initLangDropdown() {
   // opções do dropdown
   dropdown.querySelectorAll(".lang-opt").forEach(btn => {
     btn.addEventListener("click", () => {
-      applyLang(btn.dataset.lang);
+      changeLang(btn.dataset.lang);
       closeDropdown();
     });
   });
@@ -384,6 +410,45 @@ function initTimelineGlow() {
   if ("ResizeObserver" in window) new ResizeObserver(refresh).observe(timeline);
 }
 
+// ─── Glow que acompanha o cursor ─────────────────────────────────
+function initCursorGlow() {
+  const glow = document.getElementById("cursor-glow");
+  if (!glow) return;
+
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+  const reduced     = prefersReducedMotion();
+  if (!finePointer || reduced) { glow.remove(); return; }
+
+  let targetX = window.innerWidth  / 2;
+  let targetY = window.innerHeight / 2;
+  let x = targetX, y = targetY;
+  let raf = null;
+
+  function tick() {
+    // easing: segue com atraso suave, não colado no ponteiro
+    x += (targetX - x) * 0.12;
+    y += (targetY - y) * 0.12;
+    glow.style.transform = `translate3d(${x - glow.offsetWidth / 2}px, ${y - glow.offsetHeight / 2}px, 0)`;
+
+    if (Math.abs(targetX - x) > 0.1 || Math.abs(targetY - y) > 0.1) {
+      raf = requestAnimationFrame(tick);
+    } else {
+      raf = null;
+    }
+  }
+
+  window.addEventListener("pointermove", e => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    if (!glow.classList.contains("is-active")) glow.classList.add("is-active");
+    if (!raf) raf = requestAnimationFrame(tick);
+  }, { passive: true });
+
+  document.documentElement.addEventListener("pointerleave", () => {
+    glow.classList.remove("is-active");
+  });
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -394,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // idioma mobile
   document.querySelectorAll(".mobile-lang__btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      applyLang(btn.dataset.lang);
+      changeLang(btn.dataset.lang);
       closeMobileMenu();
     });
   });
@@ -448,4 +513,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initLangDropdown();
   initActiveNav();
   initTimelineGlow();
+  initCursorGlow();
 });

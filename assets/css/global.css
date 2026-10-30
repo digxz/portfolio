@@ -90,6 +90,15 @@ body {
 /* ── Animação hero ── */
 .hero__inner { display: contents; }
 
+/* ── Fade na troca de idioma ── */
+.main__content { transition: opacity .18s ease; }
+.main__content.lang-switching { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .main__content { transition: none; }
+  .main__content.lang-switching { opacity: 1; }
+}
+
 .hero__line {
   opacity: 0;
   transform: translateY(18px);
@@ -104,10 +113,40 @@ body {
 /* ── Nav ativa (IntersectionObserver) ── */
 .nav__itens a.nav--active { color: var(--color-text); }
 
+/* ── Glow que acompanha o cursor ── */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(248, 129, 4, .07) 0%,
+    rgba(248, 129, 4, .035) 40%,
+    transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .4s ease;
+  will-change: transform;
+}
+
+.cursor-glow.is-active { opacity: 1; }
+
+/* ── Ao hover num item, os irmãos apagam ── */
+.navbar ul:has(a:hover) .nav__itens a:not(:hover),
+.connect__icons:has(a:hover) a:not(:hover),
+.timeline:has(.timeline__item:hover) .timeline__item:not(:hover),
+.projects:has(.project__card:hover) .project__card:not(:hover),
+.contact__items:has(.contact__item:hover) .contact__item:not(:hover) {
+  opacity: .4;
+}
+
 /* ── @media print ── */
 @media print {
   .navbar, .mobile-menu, .hamburger, .skip-link,
-  .site-footer { display: none !important; }
+  .site-footer, .cursor-glow { display: none !important; }
 
   body {
     background: #fff;
