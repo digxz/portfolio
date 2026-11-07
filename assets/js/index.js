@@ -9,8 +9,8 @@ const i18n = {
     nav_about: "sobre", nav_experience: "experiência", nav_projects: "projetos", nav_contact: "contato",
     greeting: "olá! eu sou o", subtitle: "analista de dados júnior",
     about_title: "sobre",
-    about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
-    about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    about_p1:  "Atuo com análise de dados no Itaú Unibanco há cerca de um ano e meio, e somo mais de 4 anos de experiência na área de tecnologia.",
+    about_p2:  "Busco me capacitar continuamente e aplicar soluções com as tecnologias que me apoiam no dia a dia, principalmente Python, SQL, Computação em Nuvem (com foco em AWS) e a aplicação de Inteligência Artificial Generativa.",
     tech_tags: "tecnologias utilizadas",
     experience_title: "experiência",
     experience_items: [
@@ -60,8 +60,8 @@ const i18n = {
     nav_about: "about", nav_experience: "experience", nav_projects: "projects", nav_contact: "contact",
     greeting: "hi! i'm", subtitle: "junior data analyst",
     about_title: "about",
-    about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
-    about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    about_p1:  "I have been working in data analysis at Itaú Unibanco for about a year and a half, and I have over 4 years of experience in the technology field.",
+    about_p2:  "I keep looking to learn continuously and to apply solutions with the technologies that support me in my day-to-day work, mainly Python, SQL, Cloud Computing (with a focus on AWS) and the application of Generative Artificial Intelligence.",
     tech_tags: "technologies used",
     experience_title: "experience",
     experience_items: [
@@ -111,8 +111,8 @@ const i18n = {
     nav_about: "sobre", nav_experience: "experiencia", nav_projects: "proyectos", nav_contact: "contacto",
     greeting: "¡hola! soy", subtitle: "analista de datos junior",
     about_title: "sobre",
-    about_p1:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam, ornare sem lacinia quam venenatis vestibulum.",
-    about_p2:  "Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+    about_p1:  "Trabajo en análisis de datos en Itaú Unibanco desde hace aproximadamente un año y medio, y sumo más de 4 años de experiencia en el área de tecnología.",
+    about_p2:  "Busco capacitarme continuamente y aplicar soluciones con las tecnologías que me apoyan en mi día a día, principalmente Python, SQL, Computación en la Nube (con enfoque en AWS) y la aplicación de Inteligencia Artificial Generativa.",
     tech_tags: "tecnologías utilizadas",
     experience_title: "experiencia",
     experience_items: [
