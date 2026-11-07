@@ -327,6 +327,32 @@ function initLangDropdown() {
   });
 }
 
+// ─── Links do header rolam sem gravar o # na URL ─────────────────
+function initCleanNavAnchors() {
+  const links = document.querySelectorAll('.navbar a[href^="#"], .mobile-menu a[href^="#"]');
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      const id     = (link.getAttribute("href") || "").slice(1);
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return;
+
+      // impede o navegador de anexar #id à barra de endereço
+      e.preventDefault();
+
+      // se a URL já tiver um # (ex.: link compartilhado), remove sem saltar
+      try {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      } catch (_) { /* ignora em contextos que bloqueiam history (ex.: file://) */ }
+
+      target.scrollIntoView({
+        behavior: prefersReducedMotion() ? "instant" : "smooth",
+        block: "start",
+      });
+    });
+  });
+}
+
 // ─── Nav ativa (IntersectionObserver) ────────────────────────────
 function initActiveNav() {
   const sections = [
@@ -511,6 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initProgressBar();
   initLangDropdown();
+  initCleanNavAnchors();
   initActiveNav();
   initTimelineGlow();
   initCursorGlow();
